@@ -1,9 +1,23 @@
-h1 {
-  .title {
-    color: red;
+.mt-btn {
+  outline: none;
+  border: solid 1px transparent;
+  border-radius: 0.2em;
+  padding: 0.8em 1.6em;
+  cursor: pointer;
 
-    .name {
-      color: blue;
-    }
+  &:hover {
+    border-color: #ffffff;
+    box-shadow: 1px 1px 1px #999999;
+  }
+}
+
+.mt-primary {
+  $my-background-color: lightseagreen;
+  $my-foreground-color: #ffffff;
+  background-color: $my-background-color;
+  color: $my-foreground-color;
+
+  &:hover {
+    background-color: darken($color: $my-background-color, $amount: 6);
   }
 }
