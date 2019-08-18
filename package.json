@@ -1,7 +1,7 @@
 {
-  "name": "metrix-css",
+  "name": "metrix",
   "version": "0.0.1",
-  "description": "style for element in html",
+  "description": "util and component for web, in metrix style",
   "main": "index.js",
   "watch": {
     "scss": {
@@ -17,13 +17,22 @@
       "patterns": [
         "./"
       ]
+    },
+    "js": {
+      "extensions": "js",
+      "quiet": false,
+      "patterns": [
+        "js"
+      ]
     }
   },
   "scripts": {
     "scss": "node ./scss-build.js",
     "pug": "node ./pug-build.js",
+    "js": "npm test && npx webpack --config webpack.config.js",
     "watch": "npm-watch",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "jest",
+    "start": "npm run watch"
   },
   "repository": {
     "type": "git",
@@ -38,9 +47,13 @@
     "url": "https://github.com/nmhillusion/metrix-css/issues"
   },
   "homepage": "https://github.com/nmhillusion/metrix-css#readme",
-  "dependencies": {
+  "devDependencies": {
     "node-sass": "^4.12.0",
     "npm-watch": "^0.6.0",
-    "pug": "^2.0.4"
+    "pug": "^2.0.4",
+    "jest": "^24.9.0",
+    "webpack": "^4.39.2",
+    "webpack-cli": "^3.3.7",
+    "dotenv": "^8.1.0"
   }
 }
