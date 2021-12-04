@@ -10,9 +10,19 @@ test("test nfn", () => {
   fn.log({ result });
   expect(result).toEqual([0, 1, 11, 101]);
 
-  result = [1, 2, 3, 4, 5, 6, 7, 8].reduce((t, c) => (c % 2 ? t : t + c), 0);
+  result = [1, 2, 3, 4, 5, 6, 7, 8, 12].reduce(
+    fn.nfn(function sumEvenNumbers(current, newVal) {
+      if (0 == newVal % 2) {
+        return newVal + current;
+      } else {
+        return current;
+      }
+    }, 2),
+    0
+  );
+
   fn.log({ result });
-  expect(result).toBe(20);
+  expect(result).toBe(32);
 });
 
 test("test suffle", () => {

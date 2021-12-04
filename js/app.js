@@ -1,12 +1,14 @@
-(function() {
+(function () {
   if (typeof _m == "undefined") {
     _m = {
-      $: function(selector) {
+      $: function (selector) {
         const elements = document.querySelectorAll(selector);
         return {};
       },
 
-      fn: require("./function-utils")
+      dom: require("./dom-utils"),
+
+      fn: require("./function-utils"),
     };
   }
 })();
