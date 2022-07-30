@@ -1,4 +1,4 @@
-module.exports = function () {
+export function domUtils() {
   return {
     querySelectorAll({ selector, text, attributes }) {
       const elements = document.querySelectorAll(selector);
@@ -36,4 +36,4 @@ module.exports = function () {
       }
     },
   };
-};
+}

@@ -1,0 +1,59 @@
+.mt-btn {
+  outline: none;
+  border: solid 1px transparent;
+  border-radius: 0.2em;
+  padding: 0.8em 1.6em;
+  cursor: pointer; }
+  .mt-btn:hover {
+    border-color: #ffffff;
+    box-shadow: 1px 1px 1px #999999; }
+
+.mt-primary {
+  background-color: lightseagreen;
+  color: #ffffff; }
+  .mt-primary:hover {
+    background-color: #1b9891; }
+
+.mt-warning {
+  background-color: goldenrod; }
+
+.mt-danger {
+  background-color: #f11; }
+
+.mt-input-form {
+  display: block;
+  position: relative;
+  height: 2em; }
+  .mt-input-form .mt-label {
+    position: absolute;
+    z-index: 1;
+    left: 1em;
+    margin: auto;
+    transition: all linear 0.2s;
+    color: #36f;
+    background-color: #fff;
+    line-height: 1em;
+    font-size: 50%;
+    top: -30%; }
+  .mt-input-form .mt-input {
+    position: relative;
+    z-index: 0;
+    height: 100%;
+    border: solid 1px #36f;
+    border-radius: 0.2em;
+    background-color: transparent;
+    color: #333;
+    padding: 0 1em; }
+    .mt-input-form .mt-input:empty ~ .mt-label {
+      line-height: 2em;
+      top: 0;
+      color: #666;
+      font-size: 100%;
+      background-color: transparent; }
+    .mt-input-form .mt-input:focus ~ .mt-label {
+      color: #36f;
+      background-color: #fff;
+      line-height: 1em;
+      font-size: 12px;
+      top: -30%;
+      padding: 0 0.2em; }

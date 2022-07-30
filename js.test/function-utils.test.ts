@@ -1,17 +1,18 @@
-const fn = require("../js/function-utils");
-let result = undefined;
+import { log, nfn, randomColor, suffle } from "../src/typescript/app";
+
+let result: any = undefined;
 
 test("test nfn", () => {
-  result = [6, -6].map(fn.nfn(Math.min, 2));
-  fn.log({ result });
+  result = [6, -6].map(nfn(Math.min, 2));
+  log({ result });
   expect(result).toEqual([0, -6]);
 
-  result = ["0", 1, "11", "101"].map(fn.nfn(parseInt, 1));
-  fn.log({ result });
+  result = ["0", 1, "11", "101"].map(nfn(parseInt, 1));
+  log({ result });
   expect(result).toEqual([0, 1, 11, 101]);
 
   result = [1, 2, 3, 4, 5, 6, 7, 8, 12].reduce(
-    fn.nfn(function sumEvenNumbers(current, newVal) {
+    nfn(function sumEvenNumbers(current, newVal) {
       if (0 == newVal % 2) {
         return newVal + current;
       } else {
@@ -21,14 +22,14 @@ test("test nfn", () => {
     0
   );
 
-  fn.log({ result });
+  log({ result });
   expect(result).toBe(32);
 });
 
 test("test suffle", () => {
   const inpArr = [2, 1, 3, 7, 4];
-  result = fn.suffle(inpArr);
-  fn.log({ result });
+  result = suffle(inpArr);
+  log({ result });
   expect(result.length).toBe(5);
   inpArr.forEach((item) => {
     expect(result.includes(item)).toBe(true);
@@ -36,7 +37,7 @@ test("test suffle", () => {
 });
 
 test("test randomColor", () => {
-  result = fn.randomColor();
-  fn.log({ result });
+  result = randomColor();
+  log({ result });
   expect(Number.isNaN(Number(`0x${result.slice(1)}`))).toBe(false);
 });
