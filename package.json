@@ -1,5 +1,5 @@
 {
-  "type": "module",
+  "type": "commonjs",
   "name": "metrix",
   "version": "0.0.1",
   "description": "util and component for web, in metrix style",
@@ -8,7 +8,7 @@
     "test": "jest",
     "build-js": "tsc",
     "build-scss": "node-sass --output dist/css src/scss",
-    "build": "npm run build-js && npm run build-scss"
+    "build": "npm run build-js && npm run build-scss && webpack"
   },
   "repository": {
     "type": "git",
@@ -27,6 +27,7 @@
     "@types/jest": "^28.1.6",
     "jest": "^28.1.3",
     "node-sass": "^7.0.1",
+    "path": "^0.12.7",
     "ts-jest": "^28.0.7",
     "typescript": "^4.7.4",
     "webpack": "^5.74.0",

@@ -1,7 +1,14 @@
 export function domUtils() {
   return {
     querySelectorAll({ selector, text, attributes }) {
-      const elements = document.querySelectorAll(selector);
+      const elementsRaw: NodeListOf<HTMLElement> = document.querySelectorAll(
+        selector
+      ) as NodeListOf<HTMLElement>;
+      const elements: HTMLElement[] = [];
+      if (elementsRaw) {
+        elementsRaw.forEach((el) => elements.push(el));
+      }
+
       // console.log({ elements });
       const resultElements = [];
       mainLoop: for (const el of elements) {

@@ -5,20 +5,20 @@ export function nfn(fn: (..._argvs: any[]) => any, amount = 1e10) {
   };
 }
 
+function getRandomIndex(size: number) {
+  return Math.round(Math.random() * (size - 1));
+}
+
 export function suffle(arr: any[]) {
   let resultArr = [];
   if ("object" == typeof arr && arr.hasOwnProperty("length")) {
     const size = arr.length;
     const idxArr = [];
 
-    function getRandomIndex() {
-      return Math.round(Math.random() * (size - 1));
-    }
-
     do {
       let newIdx = -1;
       do {
-        newIdx = getRandomIndex();
+        newIdx = getRandomIndex(size);
       } while (idxArr.includes(newIdx));
 
       idxArr.push(newIdx);

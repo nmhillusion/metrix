@@ -1,4 +1,4 @@
-import { log, nfn, randomColor, suffle } from "../src/typescript/app";
+import { log, nfn, randomColor, suffle } from "../src/typescript/modules/index";
 
 let result: any = undefined;
 
