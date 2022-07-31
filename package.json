@@ -3,7 +3,11 @@
   "name": "metrix",
   "version": "0.0.1",
   "description": "util and component for web, in metrix style",
-  "main": "dist/javascript/app.js",
+  "main": "dist/javascript/main.js",
+  "types": "dist/javascript/modules/index.d.ts",
+  "files": [
+    "dist"
+  ],
   "scripts": {
     "test": "jest",
     "build-js": "tsc",
