@@ -69,3 +69,49 @@ test("url parser ERROR 2", () => {
 
   expect(urlParserResult).toBeFalsy();
 });
+
+test("url merge params 1", () => {
+  expect(UrlParser.mergeParams("https://google.com", {})).toEqual(
+    "https://google.com"
+  );
+
+  expect(UrlParser.mergeParams("https://google.com")).toEqual(
+    "https://google.com"
+  );
+});
+
+test("url merge params 2", () => {
+  expect(
+    UrlParser.mergeParams("https://google.com/search", { q: "compiler" })
+  ).toEqual("https://google.com/search?q=compiler");
+
+  expect(
+    UrlParser.mergeParams("https://google.com/search", {
+      q: "compiler",
+      lang: "vi-vn",
+    })
+  ).toEqual("https://google.com/search?q=compiler&lang=vi-vn");
+
+  expect(
+    UrlParser.mergeParams("https://google.com/search", {
+      h: "prev",
+      uid: "9001",
+    })
+  ).toEqual("https://google.com/search?h=prev&uid=9001");
+});
+
+test("url merge params 3", () => {
+  expect(
+    UrlParser.mergeParams("https://google.com/search", { q: ["compiler"] })
+  ).toEqual("https://google.com/search?q=compiler");
+
+  expect(
+    UrlParser.mergeParams("https://google.com/search", {
+      q: ["compiler", "java"],
+    })
+  ).toEqual("https://google.com/search?q=compiler&q=java");
+});
+
+test("url merge params 4 - null", () => {
+  expect(UrlParser.mergeParams()).toBeUndefined();
+});

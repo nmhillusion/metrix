@@ -45,4 +45,40 @@ export class UrlParser {
       };
     }
   }
+
+  static mergeParams(
+    url?: string,
+    params?: {
+      [param: string]:
+        | string
+        | number
+        | boolean
+        | ReadonlyArray<string | number | boolean>;
+    }
+  ): string | undefined {
+    if (!url || !params || 0 == Object.keys(params).length) {
+      return url;
+    }
+
+    const combinedParams = Object.keys(params)
+      .map((key) => {
+        const values = params[key];
+        const combinedItems = [];
+
+        if (Array.isArray(values)) {
+          for (const iValue of values) {
+            combinedItems.push(`${key}=${iValue}`);
+          }
+        } else {
+          combinedItems.push(`${key}=${values}`);
+        }
+
+        return combinedItems.join("&");
+      })
+      .join("&");
+
+    const joinSymb = url.includes("?") ? "&" : "?";
+
+    return `${url}${joinSymb}${combinedParams}`;
+  }
 }
