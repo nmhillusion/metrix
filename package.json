@@ -1,7 +1,7 @@
 {
   "type": "commonjs",
   "name": "metrix",
-  "version": "2022.0.1+2",
+  "version": "v2022.0.1+2",
   "description": "util and component for web, in metrix style",
   "main": "dist/javascript/modules/index.js",
   "types": "dist/javascript/modules/index.d.ts",
