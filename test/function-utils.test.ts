@@ -1,14 +1,19 @@
-import { log, nfn, randomColor, suffle } from "../src/typescript/modules/index";
+import {
+  logObject,
+  nfn,
+  randomColor,
+  suffle,
+} from "../src/typescript/modules/index";
 
 let result: any = undefined;
 
 test("test nfn", () => {
   result = [6, -6].map(nfn(Math.min, 2));
-  log({ result });
+  logObject({ result });
   expect(result).toEqual([0, -6]);
 
   result = ["0", 1, "11", "101"].map(nfn(parseInt, 1));
-  log({ result });
+  logObject({ result });
   expect(result).toEqual([0, 1, 11, 101]);
 
   result = [1, 2, 3, 4, 5, 6, 7, 8, 12].reduce(
@@ -22,14 +27,14 @@ test("test nfn", () => {
     0
   );
 
-  log({ result });
+  logObject({ result });
   expect(result).toBe(32);
 });
 
 test("test suffle", () => {
   const inpArr = [2, 1, 3, 7, 4];
   result = suffle(inpArr);
-  log({ result });
+  logObject({ result });
   expect(result.length).toBe(5);
   inpArr.forEach((item) => {
     expect(result.includes(item)).toBe(true);
@@ -38,6 +43,6 @@ test("test suffle", () => {
 
 test("test randomColor", () => {
   result = randomColor();
-  log({ result });
+  logObject({ result });
   expect(Number.isNaN(Number(`0x${result.slice(1)}`))).toBe(false);
 });

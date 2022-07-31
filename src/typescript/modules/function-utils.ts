@@ -37,8 +37,10 @@ export function randomColor() {
   return result;
 }
 
-export function log(o) {
+export function logObject(o: any) {
   if ("object" == typeof o) {
     Object.keys(o).forEach((key) => console.log(` ${key} : ${o[key]} `));
+  } else {
+    console.log(o);
   }
 }

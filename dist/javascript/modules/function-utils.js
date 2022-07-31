@@ -1,6 +1,6 @@
 "use strict";
 exports.__esModule = true;
-exports.log = exports.randomColor = exports.suffle = exports.nfn = void 0;
+exports.logObject = exports.randomColor = exports.suffle = exports.nfn = void 0;
 function nfn(fn, amount) {
     if (amount === void 0) { amount = 1e10; }
     return function () {
@@ -41,10 +41,13 @@ function randomColor() {
     return result;
 }
 exports.randomColor = randomColor;
-function log(o) {
+function logObject(o) {
     if ("object" == typeof o) {
         Object.keys(o).forEach(function (key) { return console.log(" ".concat(key, " : ").concat(o[key], " ")); });
     }
+    else {
+        console.log(o);
+    }
 }
-exports.log = log;
+exports.logObject = logObject;
 //# sourceMappingURL=function-utils.js.map
