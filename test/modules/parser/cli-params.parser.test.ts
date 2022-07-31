@@ -1,4 +1,4 @@
-import { cliParamsParser } from "../src/typescript/modules/index";
+import { cliParamsParser } from "../../../src/typescript/modules/index";
 
 test("test with params", () => {
   const argvs = ["node.exe", "d:/data/main.js", "mode=PROD", "user=thomas"];

@@ -3,7 +3,7 @@ import {
   nfn,
   randomColor,
   suffle,
-} from "../src/typescript/modules/index";
+} from "../../../src/typescript/modules/index";
 
 let result: any = undefined;
 
