@@ -1,2 +1,2 @@
-export * from "./utils";
-export * from "./parser";
+export * as util from "./utils";
+export * as parser from "./parser";

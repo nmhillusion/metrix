@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "tsc && webpack"
+    "build": "tsc && webpack",
+    "postinstall": "cp ../dist/javascript/main.js ./lib"
   },
   "keywords": [],
   "author": "",

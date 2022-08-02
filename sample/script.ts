@@ -1,12 +1,12 @@
-import { logObject, randomColor } from "metrix";
+import { util } from "metrix";
 
 function greet(name: string) {
   console.log("hello, guys, ", name);
 
-  logObject({
+  util.func.logObject({
     name: "Anny",
     bornYear: 1996,
     nationality: "French",
   });
 }
-greet(randomColor());
+greet(util.func.randomColor());

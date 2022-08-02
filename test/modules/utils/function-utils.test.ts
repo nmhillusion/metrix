@@ -1,9 +1,8 @@
-import {
-  logObject,
-  nfn,
-  randomColor,
-  suffle,
-} from "../../../src/typescript/modules/index";
+import { util } from "../../../src/typescript/modules/index";
+
+const {
+  func: { logObject, nfn, randomColor, suffle },
+} = util;
 
 let result: any = undefined;
 

@@ -3,11 +3,11 @@ exports.__esModule = true;
 var metrix_1 = require("metrix");
 function greet(name) {
     console.log("hello, guys, ", name);
-    (0, metrix_1.logObject)({
+    metrix_1.util.func.logObject({
         name: "Anny",
         bornYear: 1996,
         nationality: "French"
     });
 }
-greet((0, metrix_1.randomColor)());
+greet(metrix_1.util.func.randomColor());
 //# sourceMappingURL=script.js.map

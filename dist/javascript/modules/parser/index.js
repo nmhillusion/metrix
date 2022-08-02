@@ -23,7 +23,7 @@ var __importStar = (this && this.__importStar) || function (mod) {
     return result;
 };
 exports.__esModule = true;
-exports.parser = exports.util = void 0;
-exports.util = __importStar(require("./utils"));
-exports.parser = __importStar(require("./parser"));
+exports.url = exports.cliParams = void 0;
+exports.cliParams = __importStar(require("./cli-params.parser"));
+exports.url = __importStar(require("./url.parser"));
 //# sourceMappingURL=index.js.map

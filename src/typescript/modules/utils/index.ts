@@ -1,2 +1,2 @@
-export * from "./dom.util"
-export * from "./function.util"
+export * as dom from "./dom.util"
+export * as func from "./function.util"

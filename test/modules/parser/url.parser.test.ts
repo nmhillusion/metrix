@@ -1,4 +1,8 @@
-import { UrlParser } from "../../../src/typescript/modules/index";
+import { parser } from "../../../src/typescript/modules/index";
+
+const {
+  url: { UrlParser },
+} = parser;
 
 test("simple url parser", () => {
   const urlParserResult = UrlParser.parse(
@@ -82,7 +86,9 @@ test("url merge params 1", () => {
 
 test("url merge params 2", () => {
   expect(
-    UrlParser.mergeParams("https://google.com/search", { q: "compiler" })
+    UrlParser.mergeParams("https://google.com/search", {
+      q: "compiler",
+    })
   ).toEqual("https://google.com/search?q=compiler");
 
   expect(
@@ -102,7 +108,9 @@ test("url merge params 2", () => {
 
 test("url merge params 3", () => {
   expect(
-    UrlParser.mergeParams("https://google.com/search", { q: ["compiler"] })
+    UrlParser.mergeParams("https://google.com/search", {
+      q: ["compiler"],
+    })
   ).toEqual("https://google.com/search?q=compiler");
 
   expect(
