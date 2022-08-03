@@ -1,6 +1,6 @@
 {
   "type": "commonjs",
-  "name": "metrix",
+  "name": "@nmhillusion/metrix",
   "version": "v2022.0.2+4",
   "description": "util and component for web, in metrix style",
   "main": "dist/javascript/modules/index.js",
