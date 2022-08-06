@@ -1,6 +1,6 @@
 {
   "compilerOptions": {
-    "sourceRoot": "./src/typescript",
+    "sourceRoot": "./src",
     "sourceMap": true,
     "target": "ES3",
     "charset": "utf8",
@@ -9,15 +9,15 @@
     "declarationMap": true,
     "skipLibCheck": true,
     "moduleResolution": "Node",
-    "outDir": "./dist/javascript",
+    "outDir": "./dist",
     "pretty": true,
-    "rootDir": "./src/typescript",
+    "rootDir": "../",
     "baseUrl": ".",
     "esModuleInterop": true,
     "paths": {
-      "@root/*": ["./src/typescript/*"]
+      "@root/*": ["../src/typescript/*"]
     }
   },
-  "include": ["src/typescript/**/*"],
+  "include": ["./src/**/*", "../src/typescript/**/*"],
   "exclude": ["node_modules/**/*"]
 }

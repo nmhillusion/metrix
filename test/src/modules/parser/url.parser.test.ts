@@ -1,4 +1,4 @@
-import { parser } from "../../../src/typescript/modules/index";
+import { parser } from "@root/modules";
 
 const {
   url: { UrlParser },

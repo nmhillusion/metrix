@@ -1,4 +1,4 @@
-import { parser } from "../../../src/typescript/modules/index";
+import { parser } from "@root/modules";
 
 test("test with params", () => {
   const argvs = ["node.exe", "d:/data/main.js", "mode=PROD", "user=thomas"];

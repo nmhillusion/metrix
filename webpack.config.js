@@ -6,6 +6,11 @@ module.exports = {
   output: {
     library: "_m",
     filename: "main.js",
-    path: path.resolve(__dirname, "dist/javascript"),
+    path: path.resolve(__dirname, "bin"),
+  },
+  resolve: {
+    alias: {
+      "@root": path.resolve(__dirname, "dist/javascript"),
+    },
   },
 };

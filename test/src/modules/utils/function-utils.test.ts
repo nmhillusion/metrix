@@ -1,4 +1,4 @@
-import { util } from "../../../src/typescript/modules/index";
+import { util } from "@root/modules";
 
 const {
   func: { logObject, nfn, randomColor, suffle },
