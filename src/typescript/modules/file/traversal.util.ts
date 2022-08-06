@@ -13,7 +13,7 @@ export class TraversalFile {
     if (!!path && fs.existsSync(path)) {
       this.startPath = path;
     } else {
-      throw new Error("path doesn't exist");
+      throw new Error("path doesn't exist: " + path);
     }
     return this;
   }

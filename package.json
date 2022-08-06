@@ -19,7 +19,9 @@
     "generate-docs": "ts-node generate-docs.ts",
     "build-js": "tsc",
     "build-scss": "node-sass --output dist/css src/scss",
-    "build": "npm run build-js && npm run build-scss && webpack",
+    "webpack": "webpack",
+    "build-docs": "ts-node ./docs/generate-docs.ts",
+    "build": "ts-node ./build-package.ts",
     "tag-version": "ts-node tag-version.ts"
   },
   "repository": {
