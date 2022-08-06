@@ -18,6 +18,8 @@ export function tagVersion(packageJsonPath: string) {
   }
 
   const version = packageConfig["version"];
-  const commandResult = exec(`git tag ${version} && git push --tag`);
-  console.log({ commandResult });
+  const { stderr, stdout } = exec(`git tag ${version} && git push --tag`, {
+    async: false,
+  });
+  console.log({ stderr, stdout });
 }
