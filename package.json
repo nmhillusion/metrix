@@ -9,6 +9,7 @@
     "dist"
   ],
   "browser": {
+    "shelljs": false,
     "fs": false,
     "path": false,
     "os": false
