@@ -1,8 +1,8 @@
 {
   "type": "commonjs",
-  "name": "@nmhillusion/metrix",
-  "version": "v2022.0.3+6",
-  "description": "util and component for web, in metrix style",
+  "name": "@nmhillusion/n2mix",
+  "version": "v2022.0.4+7",
+  "description": "common utils and components for web",
   "main": "dist/javascript/modules/index.js",
   "types": "dist/javascript/modules/index.d.ts",
   "files": [
@@ -24,17 +24,19 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/nmhillusion/metrix.git"
+    "url": "git+https://github.com/nmhillusion/n2mix.git"
   },
   "keywords": [
-    "nmhillusion"
+    "nmhillusion",
+    "util",
+    "function"
   ],
   "author": "nmhillusion",
-  "license": "ISC",
+  "license": "MIT",
   "bugs": {
-    "url": "https://github.com/nmhillusion/metrix/issues"
+    "url": "https://github.com/nmhillusion/n2mix/issues"
   },
-  "homepage": "https://github.com/nmhillusion/metrix#readme",
+  "homepage": "https://github.com/nmhillusion/n2mix#readme",
   "devDependencies": {
     "@types/jest": "^28.1.6",
     "@types/shelljs": "^0.8.11",

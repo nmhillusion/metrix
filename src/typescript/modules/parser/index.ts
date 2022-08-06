@@ -1,2 +1,2 @@
-export * as cliParams from "./cli-params.parser";
-export * as url from "./url.parser";
+export * from "./cli-params.parser";
+export * from "./url.parser";

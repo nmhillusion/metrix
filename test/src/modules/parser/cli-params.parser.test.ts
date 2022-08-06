@@ -1,9 +1,11 @@
 import { parser } from "@root/modules";
 
+const { cliParamsParser } = parser;
+
 test("test with params", () => {
   const argvs = ["node.exe", "d:/data/main.js", "mode=PROD", "user=thomas"];
 
-  const paramList = parser.cliParams.cliParamsParser(argvs);
+  const paramList = cliParamsParser(argvs);
 
   console.log({ paramList });
 
@@ -19,7 +21,7 @@ test("test with params", () => {
 test("test with params start with - and includes =", () => {
   const argvs = ["node.exe", "d:/data/main.js", "-m=PROD", "--uid=10001"];
 
-  const paramList = parser.cliParams.cliParamsParser(argvs);
+  const paramList = cliParamsParser(argvs);
 
   console.log({ paramList });
 
@@ -44,7 +46,7 @@ test("test with params start with - and not includes =", () => {
     "-p",
   ];
 
-  const paramList = parser.cliParams.cliParamsParser(argvs);
+  const paramList = cliParamsParser(argvs);
 
   console.log({ paramList });
 
@@ -69,7 +71,7 @@ test("test with params start with - and not includes =", () => {
 test("test with no params", () => {
   const argvs = ["node.exe", "d:/data/main.js", "PROD", "thomas"];
 
-  const paramList = parser.cliParams.cliParamsParser(argvs);
+  const paramList = cliParamsParser(argvs);
 
   console.log({ paramList });
 

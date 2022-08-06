@@ -1,6 +1,6 @@
 import * as fs from "fs";
 import { which, exec } from "shelljs";
-import { CommonUtil } from "../utils/file/common.util";
+import { CommonUtil } from "../file/common.util";
 
 export function tagVersion(packageJsonPath: string) {
   if (!CommonUtil.isFile(packageJsonPath)) {

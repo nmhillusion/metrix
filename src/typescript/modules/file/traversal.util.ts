@@ -13,7 +13,7 @@ export class TraversalFile {
     if (!!path && fs.existsSync(path)) {
       this.startPath = path;
     } else {
-      console.error("path doesn't exist");
+      throw new Error("path doesn't exist");
     }
     return this;
   }
@@ -45,7 +45,7 @@ export class TraversalFile {
     path?: fs.PathLike
   ) {
     if (!callback) {
-      console.error("NOT run because of not exist callback function");
+      throw new Error("NOT run because of not exist callback function");
     }
 
     if (!path) {
