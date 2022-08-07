@@ -62,4 +62,4 @@ function parseTypeScript(tsFilePath: string) {
 //   }
 // });
 
-generateForTsFile(path.join(__dirname, "../src/typescript/modules/index.ts"));
+generateForTsFile(path.join(__dirname, "./feature.ts"));

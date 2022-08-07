@@ -30,6 +30,7 @@ export function parseCommentFromNode(
           line = removeFromStartLine(line, "/*");
           line = removeFromStartLine(line, "*/");
           line = removeFromStartLine(line, "*");
+          line = removeFromStartLine(line, "//");
           return line.trim();
         })
         .filter((l) => l)
