@@ -1,3 +1,0 @@
-## Function: domUtils
-
-### Parameters

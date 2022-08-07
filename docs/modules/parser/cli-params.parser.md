@@ -1,5 +1,0 @@
-## Function: cliParamsParser
-
-### Parameters
-
-- **`argvs`**: ****
