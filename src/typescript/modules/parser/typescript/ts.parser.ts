@@ -1,7 +1,7 @@
 import path from "path";
 import * as fs from "fs";
 import ts from "typescript";
-import { TsFileModel, TsFunctionModel } from "./model";
+import { TsFileModel, TsFunctionModel, TsInterfaceModel } from "./model";
 import { TsClassModel } from "./model";
 import {
   parseClassFromNode,
@@ -9,6 +9,7 @@ import {
   parseInterfaceFromNode,
   parseTypeAliasFromNode,
 } from "./part-parser";
+import { parseExportFromNode } from "./part-parser/export.parse";
 
 export class TsParser {
   constructor(private tsFilePath: string) {
@@ -24,7 +25,8 @@ export class TsParser {
 
     const tsClassList: TsClassModel[] = [];
     const tsFunctionList: TsFunctionModel[] = [];
-    const tsInterfaceList = [];
+    const tsInterfaceList: TsInterfaceModel[] = [];
+    const tsExportList = [];
 
     tsSourceFile.forEachChild((child) => {
       if (ts.isClassDeclaration(child)) {
@@ -35,6 +37,8 @@ export class TsParser {
         tsInterfaceList.push(parseInterfaceFromNode(tsSourceFile, child));
       } else if (ts.isTypeAliasDeclaration(child)) {
         tsInterfaceList.push(parseTypeAliasFromNode(tsSourceFile, child));
+      } else if (ts.isExportDeclaration(child)) {
+        tsExportList.push(parseExportFromNode(tsSourceFile, child));
       } else {
         console.warn("NOT define > nodeKind: ", ts.SyntaxKind[child.kind]);
       }
@@ -44,6 +48,7 @@ export class TsParser {
       tsClassList,
       tsFunctionList,
       tsInterfaceList,
+      tsExportList,
     };
   }
 }

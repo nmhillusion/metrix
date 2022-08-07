@@ -6,4 +6,5 @@ export interface TsFileModel {
   tsFunctionList: TsFunctionModel[];
   tsClassList: TsClassModel[];
   tsInterfaceList: TsInterfaceModel[];
+  tsExportList: any[];
 }

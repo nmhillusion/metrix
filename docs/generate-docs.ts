@@ -48,6 +48,11 @@ function parseTypeScript(tsFilePath: string) {
     console.log("interf: ", interf);
     console.log("string interface: ", JSON.stringify(interf));
   }
+
+  for (const exp of tsFileModel.tsExportList) {
+    console.log("exp: ", exp);
+    console.log("string export: ", JSON.stringify(exp));
+  }
 }
 
 // new file.TraversalFile().fromPath(prefixPath).runWithCallback((filePath) => {
@@ -57,4 +62,4 @@ function parseTypeScript(tsFilePath: string) {
 //   }
 // });
 
-generateForTsFile(path.join(__dirname, "./feature.ts"));
+generateForTsFile(path.join(__dirname, "../src/typescript/modules/index.ts"));
