@@ -1,5 +1,5 @@
 import ts from "typescript";
-import { TsPropertyModel } from "../model";
+import { TsPropertyModel, KeywordType } from "../model";
 import { parseCommentFromNode } from "./comment.parse";
 
 export function parsePropertyFromNode(
@@ -8,7 +8,7 @@ export function parsePropertyFromNode(
 ): TsPropertyModel {
   let isStatic = false;
   propertyNode.modifiers?.forEach((md) => {
-    if ("StaticKeyword" === ts.SyntaxKind[md.kind]) {
+    if (KeywordType.StaticKeyword === ts.SyntaxKind[md.kind]) {
       isStatic = true;
     }
   });

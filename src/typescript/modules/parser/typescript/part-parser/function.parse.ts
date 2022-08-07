@@ -1,6 +1,5 @@
 import ts from "typescript";
-import { TsFunctionModel } from "../model";
-import { TsParamModel } from "../model/TsParam.model";
+import { KeywordType, TsFunctionModel, TsParamModel } from "../model";
 import { parseCommentFromNode } from "./comment.parse";
 
 export function parseFunctionFromNode(
@@ -10,7 +9,7 @@ export function parseFunctionFromNode(
   let isStatic = false;
   funcNode.modifiers?.forEach((md) => {
     // console.log("mod kind: ", ts.SyntaxKind[md.kind]);
-    if ("StaticKeyword" === ts.SyntaxKind[md.kind]) {
+    if (KeywordType.StaticKeyword === ts.SyntaxKind[md.kind]) {
       isStatic = true;
     }
   });
@@ -21,6 +20,7 @@ export function parseFunctionFromNode(
       name: param.name.getText(tsSourceFile),
       type: param.type?.getText(tsSourceFile),
       optional: !!param.questionToken,
+      comments: parseCommentFromNode(tsSourceFile, param),
     });
   }
 
