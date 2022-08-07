@@ -12,13 +12,13 @@ import {
 import { parseExportFromNode } from "./part-parser/export.parse";
 
 export class TsParser {
-  constructor(private tsFilePath: string) {
-    tsFilePath = path.resolve(tsFilePath);
+  constructor(private tsFilePath: fs.PathLike) {
+    tsFilePath = path.resolve(String(tsFilePath));
   }
 
   parse(): TsFileModel {
     const tsSourceFile = ts.createSourceFile(
-      path.basename(this.tsFilePath),
+      path.basename(String(this.tsFilePath)),
       fs.readFileSync(this.tsFilePath).toString(),
       ts.ScriptTarget.Latest
     );
