@@ -1,9 +1,7 @@
-import { util } from "@root/modules";
+import { file } from "@root/modules";
 import path from "path";
 
-const {
-  file: { CommonUtil },
-} = util;
+const { CommonUtil } = file;
 
 test("test common util - directory", () => {
   expect(CommonUtil.isDirectory(path.join(__dirname, "../file"))).toBeTruthy();
