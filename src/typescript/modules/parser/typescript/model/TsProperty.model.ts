@@ -1,7 +1,7 @@
 import { TsCommentModel } from "./TsComment.model";
 
 export class TsPropertyModel {
-  propertyName: string;
+  name: string;
   type?: string;
   isStatic: boolean;
   comments: TsCommentModel[];

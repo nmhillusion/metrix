@@ -14,7 +14,7 @@ export function parsePropertyFromNode(
   });
 
   return {
-    propertyName: propertyNode.name.getText(tsSourceFile),
+    name: propertyNode.name.getText(tsSourceFile),
     isStatic,
     comments: parseCommentFromNode(tsSourceFile, propertyNode),
     type: propertyNode.type?.getText(tsSourceFile),

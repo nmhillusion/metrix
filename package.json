@@ -12,7 +12,8 @@
     "shelljs": false,
     "fs": false,
     "path": false,
-    "os": false
+    "os": false,
+    "typescript": false
   },
   "scripts": {
     "test": "jest --config=jest.config.js",
