@@ -4,7 +4,7 @@ import { parseCommentFromNode } from "./comment.parse";
 
 export function parseFunctionFromNode(
   tsSourceFile: ts.SourceFile,
-  funcNode: ts.FunctionDeclaration | ts.MethodDeclaration
+  funcNode: ts.FunctionDeclaration | ts.MethodDeclaration | ts.MethodSignature
 ): TsFunctionModel {
   let isStatic = false;
   funcNode.modifiers?.forEach((md) => {
