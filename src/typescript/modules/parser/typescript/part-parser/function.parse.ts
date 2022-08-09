@@ -7,10 +7,13 @@ export function parseFunctionFromNode(
   funcNode: ts.FunctionDeclaration | ts.MethodDeclaration | ts.MethodSignature
 ): TsFunctionModel {
   let isStatic = false;
+  let isExport = false;
   funcNode.modifiers?.forEach((md) => {
-    // console.log("mod kind: ", ts.SyntaxKind[md.kind]);
+    // console.log("modifier kind: ", ts.SyntaxKind[md.kind]);
     if (KeywordType.StaticKeyword === ts.SyntaxKind[md.kind]) {
       isStatic = true;
+    } else if (KeywordType.ExportKeyword === ts.SyntaxKind[md.kind]) {
+      isExport = true;
     }
   });
 
@@ -24,10 +27,15 @@ export function parseFunctionFromNode(
     });
   }
 
+  // funcNode.forEachChild((node) => {
+  //   console.log("func node: ", ts.SyntaxKind[node.kind]);
+  // });
+
   return {
     functionName: funcNode.name.getText(tsSourceFile),
     returnType: funcNode.type?.getText(tsSourceFile),
     isStatic,
+    isExport,
     paramList,
     comments: parseCommentFromNode(tsSourceFile, funcNode),
   };

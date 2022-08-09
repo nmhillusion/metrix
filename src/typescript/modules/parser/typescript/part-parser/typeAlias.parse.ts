@@ -1,6 +1,11 @@
 import ts from "typescript";
 import { parseCommentFromNode } from "./comment.parse";
-import { TsFunctionModel, TsInterfaceModel, TsPropertyModel } from "../model";
+import {
+  KeywordType,
+  TsFunctionModel,
+  TsInterfaceModel,
+  TsPropertyModel,
+} from "../model";
 import { parsePropertyFromNode } from "./property.parse";
 import { parseFunctionFromNode } from "./function.parse";
 
@@ -11,6 +16,14 @@ export function parseTypeAliasFromNode(
   const propertyList: TsPropertyModel[] = [];
   const methodList: TsFunctionModel[] = [];
   // console.log({ interfNode });
+
+  let isExport = false;
+  typeAliasNode.modifiers?.forEach((md) => {
+    // console.log("modifier kind: ", ts.SyntaxKind[md.kind]);
+    if (KeywordType.ExportKeyword === ts.SyntaxKind[md.kind]) {
+      isExport = true;
+    }
+  });
 
   typeAliasNode.forEachChild((member) => {
     if (ts.isTypeLiteralNode(member)) {
@@ -34,5 +47,6 @@ export function parseTypeAliasFromNode(
     comments: parseCommentFromNode(tsSourceFile, typeAliasNode),
     propertyList,
     methodList,
+    isExport,
   };
 }

@@ -1,6 +1,11 @@
 import ts from "typescript";
 import { parseCommentFromNode } from "./comment.parse";
-import { TsFunctionModel, TsInterfaceModel, TsPropertyModel } from "../model";
+import {
+  KeywordType,
+  TsFunctionModel,
+  TsInterfaceModel,
+  TsPropertyModel,
+} from "../model";
 import { parsePropertyFromNode } from "./property.parse";
 import { parseFunctionFromNode } from "./function.parse";
 
@@ -12,6 +17,14 @@ export function parseInterfaceFromNode(
   const methodList: TsFunctionModel[] = [];
 
   // console.log({ interfNode });
+
+  let isExport = false;
+  interfNode.modifiers?.forEach((md) => {
+    // console.log("modifier kind: ", ts.SyntaxKind[md.kind]);
+    if (KeywordType.ExportKeyword === ts.SyntaxKind[md.kind]) {
+      isExport = true;
+    }
+  });
 
   interfNode.forEachChild((member) => {
     // console.log("interface member: ", member.getFullText(tsSourceFile));
@@ -32,5 +45,6 @@ export function parseInterfaceFromNode(
     comments: parseCommentFromNode(tsSourceFile, interfNode),
     propertyList,
     methodList,
+    isExport,
   };
 }

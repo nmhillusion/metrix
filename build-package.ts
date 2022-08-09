@@ -8,9 +8,9 @@ execCommand(`npm run build-docs`);
 function execCommand(command: string) {
   console.log(`command: [${command}]`);
 
-  const { stderr, stdout } = shx.exec(command, {
+  const { code } = shx.exec(command, {
     async: false,
   });
 
-  console.log(`command: [${command}]; output: `, { stderr, stdout });
+  console.log(`command: [${command}]; returnCode: `, code);
 }

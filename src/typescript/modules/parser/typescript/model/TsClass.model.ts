@@ -4,6 +4,7 @@ import { TsPropertyModel } from "./TsProperty.model";
 
 export interface TsClassModel {
   className: string;
+  isExport: boolean;
   comments: TsCommentModel[];
   methodList: TsFunctionModel[];
   propertyList: TsPropertyModel[];

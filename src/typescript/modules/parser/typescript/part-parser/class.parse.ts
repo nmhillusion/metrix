@@ -1,6 +1,11 @@
 import ts from "typescript";
 import { parseCommentFromNode } from "./comment.parse";
-import { TsClassModel, TsFunctionModel, TsPropertyModel } from "../model";
+import {
+  KeywordType,
+  TsClassModel,
+  TsFunctionModel,
+  TsPropertyModel,
+} from "../model";
 import { parsePropertyFromNode } from "./property.parse";
 import { parseFunctionFromNode } from "./function.parse";
 
@@ -10,6 +15,14 @@ export function parseClassFromNode(
 ): TsClassModel {
   const methodList: TsFunctionModel[] = [];
   const propertyList: TsPropertyModel[] = [];
+
+  let isExport = false;
+  classNode.modifiers?.forEach((md) => {
+    // console.log("modifier kind: ", ts.SyntaxKind[md.kind]);
+    if (KeywordType.ExportKeyword === ts.SyntaxKind[md.kind]) {
+      isExport = true;
+    }
+  });
 
   classNode.forEachChild((member) => {
     if (ts.isMethodDeclaration(member)) {
@@ -24,6 +37,7 @@ export function parseClassFromNode(
   return {
     className: classNode.name.escapedText.toString(),
     comments: parseCommentFromNode(tsSourceFile, classNode),
+    isExport,
     methodList,
     propertyList,
   };

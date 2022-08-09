@@ -5,6 +5,7 @@ export interface TsFunctionModel {
   functionName: string;
   returnType: string;
   isStatic: boolean;
+  isExport: boolean;
   paramList: TsParamModel[];
   comments: TsCommentModel[];
 }
