@@ -1,21 +1,7 @@
-import * as fs from "fs";
 import path from "path";
+import { buildPublishPackageJson } from "../src/typescript/helper/package.helper";
 
-let packageJson = JSON.parse(
-  fs.readFileSync(path.join(__dirname, "../package.json")).toString()
-);
-
-packageJson = Object.assign(packageJson, {
-  main: "index.js",
-  types: "index.d.ts",
-  files: ["*"],
-  scripts: {},
+buildPublishPackageJson({
+  basePublishDir: path.join(__dirname, "../dist/javascript"),
+  packageJsonPath: path.join(__dirname, "../package.json"),
 });
-
-fs.writeFileSync(
-  path.join(__dirname, "../dist/javascript/package.json"),
-  JSON.stringify(packageJson),
-  {
-    encoding: "utf-8",
-  }
-);

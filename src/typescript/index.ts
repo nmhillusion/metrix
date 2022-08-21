@@ -18,3 +18,8 @@ export * as http from "./http";
  * checking; reading and other things to do with file system
  */
 export * as file from "./file";
+
+/**
+ * helpers to do common task with many actions; more common than util module
+ */
+export * as helper from "./helper";
