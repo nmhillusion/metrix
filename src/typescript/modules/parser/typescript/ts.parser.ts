@@ -39,6 +39,10 @@ export class TsParser {
         tsInterfaceList.push(parseTypeAliasFromNode(tsSourceFile, child));
       } else if (ts.isExportDeclaration(child)) {
         tsExportList.push(parseExportFromNode(tsSourceFile, child));
+      } else if (
+        ts.SyntaxKind[ts.SyntaxKind.EndOfFileToken] == ts.SyntaxKind[child.kind]
+      ) {
+        /// nothing to do with end of file token
       } else {
         console.warn("NOT define > nodeKind: ", ts.SyntaxKind[child.kind]);
       }
