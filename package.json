@@ -1,10 +1,10 @@
 {
   "type": "commonjs",
   "name": "@nmhillusion/n2mix",
-  "version": "v2022.0.8+12",
+  "version": "v2022.0.9+13",
   "description": "common utils and components for web",
-  "main": "dist/javascript/modules/index.js",
-  "types": "dist/javascript/modules/index.d.ts",
+  "main": "dist/javascript/index.js",
+  "typings": "dist/javascript/index.d.js",
   "files": [
     "dist"
   ],
