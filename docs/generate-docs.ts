@@ -1,6 +1,6 @@
 import path from "path";
 import * as fs from "fs";
-import { TsParser } from "../src/typescript/modules/parser/typescript";
+import { TsParser } from "../src/typescript/parser/typescript";
 
 const prefixPath = path.join(__dirname, "../dist/javascript");
 

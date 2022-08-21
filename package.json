@@ -1,7 +1,7 @@
 {
   "type": "commonjs",
   "name": "@nmhillusion/n2mix",
-  "version": "v2022.0.5+9",
+  "version": "v2022.0.7+11",
   "description": "common utils and components for web",
   "main": "dist/javascript/modules/index.js",
   "types": "dist/javascript/modules/index.d.ts",
@@ -17,14 +17,15 @@
   },
   "scripts": {
     "test": "jest --config=jest.config.js",
-    "generate-docs": "ts-node generate-docs.ts",
+    "generate-docs": "ts-node ./support/generate-docs.ts",
     "build-js": "tsc",
     "build-scss": "node-sass --output dist/css src/scss",
     "webpack": "webpack",
     "build-docs": "ts-node ./docs/generate-docs.ts",
+    "build-publish-package-json": "ts-node ./support/build-publish-package-json.ts",
     "// main scripts from here": "// main scripts from here",
-    "build": "ts-node ./build-package.ts",
-    "tag-version": "ts-node tag-version.ts"
+    "build": "ts-node ./support/build-package.ts",
+    "tag-version": "ts-node ./support/tag-version.ts"
   },
   "repository": {
     "type": "git",
