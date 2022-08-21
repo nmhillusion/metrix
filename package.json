@@ -22,6 +22,7 @@
     "build-scss": "node-sass --output dist/css src/scss",
     "webpack": "webpack",
     "build-docs": "ts-node ./docs/generate-docs.ts",
+    "// main scripts from here": "// main scripts from here",
     "build": "ts-node ./build-package.ts",
     "tag-version": "ts-node tag-version.ts"
   },

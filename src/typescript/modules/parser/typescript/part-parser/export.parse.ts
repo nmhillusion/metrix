@@ -1,5 +1,5 @@
 import ts from "typescript";
-import { TsExportModel } from "../model/export.model";
+import { TsExportModel } from "../model/TsExport.model";
 import { parseCommentFromNode } from "./comment.parse";
 
 export function parseExportFromNode(
