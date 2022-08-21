@@ -1,8 +1,6 @@
-import { util } from "@root/modules";
+import { func } from "@root/utils";
 
-const {
-  func: { logObject, nfn, randomColor, suffle },
-} = util;
+const { logObject, nfn, randomColor, suffle } = func;
 
 let result: any = undefined;
 

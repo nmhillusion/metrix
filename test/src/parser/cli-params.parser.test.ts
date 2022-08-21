@@ -1,6 +1,4 @@
-import { parser } from "@root/modules";
-
-const { cliParamsParser } = parser;
+import { cliParamsParser } from "@root/parser";
 
 test("test with params", () => {
   const argvs = ["node.exe", "d:/data/main.js", "mode=PROD", "user=thomas"];

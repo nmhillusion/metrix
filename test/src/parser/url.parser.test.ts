@@ -1,6 +1,4 @@
-import { parser } from "@root/modules";
-
-const { UrlParser } = parser;
+import { UrlParser } from "@root/parser";
 
 test("simple url parser", () => {
   const urlParserResult = UrlParser.parse(

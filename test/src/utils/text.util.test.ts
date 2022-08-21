@@ -1,4 +1,4 @@
-import { text } from "@root/modules/utils";
+import { text } from "@root/utils";
 
 test("test convert string to normal lines", () => {
   const inp = `first line

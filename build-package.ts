@@ -1,4 +1,4 @@
-import shx from "shelljs";
+import * as shx from "shelljs";
 
 execCommand(`npm run build-js`);
 execCommand(`npm run build-scss`);

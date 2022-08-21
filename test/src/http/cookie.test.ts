@@ -1,4 +1,4 @@
-import { CookieMix } from "@root/modules/http";
+import { CookieMix } from "@root/http";
 
 test("test for cookie string", () => {
   const outputCookie = CookieMix.setCookie({
