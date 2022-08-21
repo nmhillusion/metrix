@@ -2,7 +2,7 @@ const path = require("path");
 
 module.exports = {
   mode: "production",
-  entry: "./dist/javascript/modules/index.js",
+  entry: "./dist/javascript/index.js",
   output: {
     library: "_m",
     filename: "main.js",
