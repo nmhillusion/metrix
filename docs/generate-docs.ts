@@ -22,7 +22,7 @@ try {
     recursive: true,
   });
   fs.rmSync(path.join(__dirname, "./utils"), { force: true, recursive: true });
-  fs.rmSync(path.join(__dirname, "./index.md"));
+  fs.rmSync(path.join(__dirname, "./README.md"));
 } catch (error) {
   console.error("Error when rm old files: ", error);
 }
@@ -41,10 +41,16 @@ function generateForTsFile(tsFilePath) {
 
   if (expectedOutFolder) {
     fs.writeFileSync(
-      path.join(expectedOutFolder, path.basename(tsFilePath, ".d.ts") + ".md"),
+      path.join(expectedOutFolder, getFileName(tsFilePath) + ".md"),
       markdownContent
     );
   }
+}
+
+function getFileName(tsFilePath: string) {
+  const basename = path.basename(tsFilePath, ".d.ts");
+
+  return String(basename).toLowerCase() == "index" ? "README" : basename;
 }
 
 function runWithCallback(filePath) {
