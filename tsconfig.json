@@ -1,5 +1,6 @@
 {
   "compilerOptions": {
+    "module": "CommonJS",
     "sourceRoot": "./src/typescript",
     "sourceMap": true,
     "target": "ES3",

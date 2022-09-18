@@ -11,13 +11,11 @@
   "browser": {
     "shelljs": false,
     "fs": false,
-    "path": false,
     "os": false,
     "typescript": false
   },
   "scripts": {
     "test": "jest --config=jest.config.js",
-    "generate-docs": "ts-node ./support/generate-docs.ts",
     "build-js": "tsc",
     "build-scss": "sass src/scss:dist/css",
     "webpack": "webpack",
@@ -53,7 +51,9 @@
     "tsconfig-paths-webpack-plugin": "^4.0.0",
     "typescript": "^4.7.4",
     "webpack": "^5.74.0",
-    "webpack-cli": "^4.10.0"
+    "webpack-cli": "^4.10.0",
+    "@nmhillusion/n2gendocs-ts": "^2022.1.3",
+    "@nmhillusion/n2log4web": "^2022.0.2"
   },
   "dependencies": {
     "shelljs": "^0.8.5"

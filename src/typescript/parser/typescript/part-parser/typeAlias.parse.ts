@@ -8,6 +8,7 @@ import {
 } from "../model";
 import { parsePropertyFromNode } from "./property.parse";
 import { parseFunctionFromNode } from "./function.parse";
+import { LogFactory } from "@nmhillusion/n2log4web";
 
 export function parseTypeAliasFromNode(
   tsSourceFile: ts.SourceFile,
@@ -36,7 +37,10 @@ export function parseTypeAliasFromNode(
     } else if (ts.isMethodSignature(member)) {
       methodList.push(parseFunctionFromNode(tsSourceFile, member));
     } else {
-      console.log("other member kind: ", ts.SyntaxKind[member.kind]);
+      LogFactory.getNodeLog(__filename).info(
+        "other member kind: ",
+        ts.SyntaxKind[member.kind]
+      );
     }
   });
 

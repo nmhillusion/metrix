@@ -10,6 +10,7 @@ import {
   parseTypeAliasFromNode,
 } from "./part-parser";
 import { parseExportFromNode } from "./part-parser/export.parse";
+import { LogFactory } from "@nmhillusion/n2log4web";
 
 export class TsParser {
   constructor(private tsFilePath: fs.PathLike) {
@@ -44,7 +45,10 @@ export class TsParser {
       ) {
         /// nothing to do with end of file token
       } else {
-        console.warn("NOT define > nodeKind: ", ts.SyntaxKind[child.kind]);
+        LogFactory.getNodeLog(__filename).warn(
+          "NOT define > nodeKind: ",
+          ts.SyntaxKind[child.kind]
+        );
       }
     });
 

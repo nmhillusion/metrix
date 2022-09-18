@@ -8,6 +8,7 @@ import {
 } from "../model";
 import { parsePropertyFromNode } from "./property.parse";
 import { parseFunctionFromNode } from "./function.parse";
+import { LogFactory } from "@nmhillusion/n2log4web";
 
 export function parseClassFromNode(
   tsSourceFile: ts.SourceFile,
@@ -18,7 +19,6 @@ export function parseClassFromNode(
 
   let isExport = false;
   classNode.modifiers?.forEach((md) => {
-    // console.log("modifier kind: ", ts.SyntaxKind[md.kind]);
     if (KeywordType.ExportKeyword === ts.SyntaxKind[md.kind]) {
       isExport = true;
     }
@@ -30,7 +30,10 @@ export function parseClassFromNode(
     } else if (ts.isPropertyDeclaration(member)) {
       propertyList.push(parsePropertyFromNode(tsSourceFile, member));
     } else {
-      console.log("other member kind: ", ts.SyntaxKind[member.kind]);
+      LogFactory.getNodeLog(__filename).info(
+        "other member kind: ",
+        ts.SyntaxKind[member.kind]
+      );
     }
   });
 

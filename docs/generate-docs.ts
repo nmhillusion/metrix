@@ -1,16 +1,36 @@
 import path from "path";
-import * as fs from "fs";
-import { TsParser } from "../src/typescript/parser/typescript";
+import fs from "fs";
+
+import { DocsGenerator } from "@nmhillusion/n2gendocs-ts";
+
+console.log({ __dirname });
 
 const prefixPath = path.join(__dirname, "../dist/javascript");
 
-fs.rmSync(path.join(__dirname, "./modules"), { force: true, recursive: true });
-fs.rmSync(path.join(__dirname, "./types"), { force: true, recursive: true });
+try {
+  fs.rmSync(path.join(__dirname, "./file"), { force: true, recursive: true });
+  fs.rmSync(path.join(__dirname, "./helper"), {
+    force: true,
+    recursive: true,
+  });
+  fs.rmSync(path.join(__dirname, "./http"), {
+    force: true,
+    recursive: true,
+  });
+  fs.rmSync(path.join(__dirname, "./parser"), {
+    force: true,
+    recursive: true,
+  });
+  fs.rmSync(path.join(__dirname, "./utils"), { force: true, recursive: true });
+  fs.rmSync(path.join(__dirname, "./index.md"));
+} catch (error) {
+  console.error("Error when rm old files: ", error);
+}
 
-function generateForTsFile(tsFilePath: string) {
+function generateForTsFile(tsFilePath) {
   console.log("generate docs for ", tsFilePath);
 
-  const markdownContent = `tsFilePath: ${tsFilePath}`;
+  const markdownContent = new DocsGenerator(tsFilePath).generate();
   let relativePath = path.relative(prefixPath, tsFilePath);
   let baseFolder = path.dirname(relativePath);
   let expectedOutFolder = path.join(__dirname, baseFolder);
@@ -25,41 +45,35 @@ function generateForTsFile(tsFilePath: string) {
       markdownContent
     );
   }
-
-  console.log({ relativePath, baseFolder, outFolder });
-
-  parseTypeScript(tsFilePath);
 }
 
-function parseTypeScript(tsFilePath: string) {
-  const tsFileModel = new TsParser(tsFilePath).parse();
-  console.log({ tsFileModel });
-  for (const cls of tsFileModel.tsClassList) {
-    console.log("class: ", cls);
-    console.log("string class: ", JSON.stringify(cls));
-  }
-
-  for (const func of tsFileModel.tsFunctionList) {
-    console.log("func: ", func);
-    console.log("string class: ", JSON.stringify(func));
-  }
-
-  for (const interf of tsFileModel.tsInterfaceList) {
-    console.log("interf: ", interf);
-    console.log("string interface: ", JSON.stringify(interf));
-  }
-
-  for (const exp of tsFileModel.tsExportList) {
-    console.log("exp: ", exp);
-    console.log("string export: ", JSON.stringify(exp));
+function runWithCallback(filePath) {
+  filePath = String(filePath);
+  if (filePath.endsWith(".d.ts")) {
+    generateForTsFile(filePath);
   }
 }
 
-// new file.TraversalFile().fromPath(prefixPath).runWithCallback((filePath) => {
-//   filePath = String(filePath);
-//   if (filePath.endsWith(".d.ts")) {
-//     generateForTsFile(filePath);
-//   }
-// });
+function traversal(callback, fpath) {
+  if (!callback) {
+    throw new Error("NOT run because of not exist callback function");
+  }
 
-generateForTsFile(path.join(__dirname, "./feature.ts"));
+  if (!fpath) {
+    fpath = this.startPath;
+  }
+
+  if (fs.lstatSync(fpath).isDirectory()) {
+    for (const itemOfDir of fs.readdirSync(fpath)) {
+      const fullPath = path.join(String(fpath), itemOfDir);
+
+      if (fs.lstatSync(fullPath).isFile()) {
+        callback(fullPath);
+      } else if (fs.lstatSync(fullPath).isDirectory()) {
+        traversal(callback, fullPath);
+      }
+    }
+  }
+}
+
+traversal(runWithCallback, prefixPath);
