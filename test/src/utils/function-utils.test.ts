@@ -1,4 +1,4 @@
-import { func } from "@root/utils";
+import { func } from "@nmhillusion/n2mix/utils";
 
 const { logObject, nfn, randomColor, suffle } = func;
 

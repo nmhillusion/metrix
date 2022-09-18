@@ -1,4 +1,4 @@
-import { text } from "@root/utils";
+import { text } from "@nmhillusion/n2mix/utils";
 
 test("test convert string to normal lines", () => {
   const inp = `first line

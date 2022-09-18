@@ -1,4 +1,4 @@
-import { TraversalFile } from "@root/file";
+import { TraversalFile } from "@nmhillusion/n2mix/file";
 import path from "path";
 
 test("traversal and result", async () => {

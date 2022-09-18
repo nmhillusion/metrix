@@ -1,4 +1,4 @@
-import { cliParamsParser } from "@root/parser";
+import { cliParamsParser } from "@nmhillusion/n2mix/parser";
 
 test("test with params", () => {
   const argvs = ["node.exe", "d:/data/main.js", "mode=PROD", "user=thomas"];

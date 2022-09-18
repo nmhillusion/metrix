@@ -1,4 +1,4 @@
-import { CommonUtil } from "@root/file";
+import { CommonUtil } from "@nmhillusion/n2mix/file";
 import path from "path";
 
 test("test common util - directory", () => {

@@ -1,4 +1,4 @@
-import { UrlParser } from "@root/parser";
+import { UrlParser } from "@nmhillusion/n2mix/parser";
 
 test("simple url parser", () => {
   const urlParserResult = UrlParser.parse(

@@ -16,7 +16,7 @@
     "baseUrl": ".",
     "esModuleInterop": true,
     "paths": {
-      "@root/*": ["./src/typescript/*"]
+      "@nmhillusion/n2mix/*": ["./src/typescript/*"]
     }
   },
   "include": ["src/typescript/**/*"],

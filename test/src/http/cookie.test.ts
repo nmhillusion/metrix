@@ -1,4 +1,4 @@
-import { CookieMix } from "@root/http";
+import { CookieMix } from "@nmhillusion/n2mix/http";
 
 test("test for cookie string", () => {
   const outputCookie = CookieMix.setCookie({
