@@ -1,6 +1,6 @@
 # Entry: `undefined`
 
-> Reference to: `./TsClass.model`
+> Reference to: [./TsClass.model.md](./TsClass.model.md)
 
     
 <br/>
@@ -16,7 +16,7 @@
 
 # Entry: `undefined`
 
-> Reference to: `./TsComment.model`
+> Reference to: [./TsComment.model.md](./TsComment.model.md)
 
     
 <br/>
@@ -32,7 +32,7 @@
 
 # Entry: `undefined`
 
-> Reference to: `./TsFile.model`
+> Reference to: [./TsFile.model.md](./TsFile.model.md)
 
     
 <br/>
@@ -48,7 +48,7 @@
 
 # Entry: `undefined`
 
-> Reference to: `./TsFunction.model`
+> Reference to: [./TsFunction.model.md](./TsFunction.model.md)
 
     
 <br/>
@@ -64,7 +64,7 @@
 
 # Entry: `undefined`
 
-> Reference to: `./TsParam.model`
+> Reference to: [./TsParam.model.md](./TsParam.model.md)
 
     
 <br/>
@@ -80,7 +80,7 @@
 
 # Entry: `undefined`
 
-> Reference to: `./TsProperty.model`
+> Reference to: [./TsProperty.model.md](./TsProperty.model.md)
 
     
 <br/>
@@ -96,7 +96,7 @@
 
 # Entry: `undefined`
 
-> Reference to: `./TsInterface.model`
+> Reference to: [./TsInterface.model.md](./TsInterface.model.md)
 
     
 <br/>
@@ -112,7 +112,7 @@
 
 # Entry: `undefined`
 
-> Reference to: `./TsExport.model`
+> Reference to: [./TsExport.model.md](./TsExport.model.md)
 
     
 <br/>
@@ -128,6 +128,6 @@
 
 # Entry: `undefined`
 
-> Reference to: `./KeyWord.type`
+> Reference to: [./KeyWord.type.md](./KeyWord.type.md)
 
     

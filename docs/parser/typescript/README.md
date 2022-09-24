@@ -1,6 +1,6 @@
 # Entry: `undefined`
 
-> Reference to: `./ts.parser`
+> Reference to: [./ts.parser.md](./ts.parser.md)
 
     
 <br/>

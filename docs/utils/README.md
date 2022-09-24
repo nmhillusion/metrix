@@ -1,6 +1,6 @@
 # Entry: `dom`
 
-> Reference to: `./dom.util`
+> Reference to: [./dom.util.md](./dom.util.md)
 
     
 <br/>
@@ -16,7 +16,7 @@
 
 # Entry: `func`
 
-> Reference to: `./function.util`
+> Reference to: [./function.util.md](./function.util.md)
 
     
 <br/>
@@ -32,7 +32,7 @@
 
 # Entry: `git`
 
-> Reference to: `./git.util`
+> Reference to: [./git.util.md](./git.util.md)
 
     
 <br/>
@@ -48,6 +48,6 @@
 
 # Entry: `text`
 
-> Reference to: `./text.util`
+> Reference to: [./text.util.md](./text.util.md)
 
     

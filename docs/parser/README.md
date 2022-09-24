@@ -1,6 +1,6 @@
 # Entry: `undefined`
 
-> Reference to: `./cli-params.parser`
+> Reference to: [./cli-params.parser.md](./cli-params.parser.md)
 
     
 <br/>
@@ -16,7 +16,7 @@
 
 # Entry: `undefined`
 
-> Reference to: `./url.parser`
+> Reference to: [./url.parser.md](./url.parser.md)
 
     
 <br/>

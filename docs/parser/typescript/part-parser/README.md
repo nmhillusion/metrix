@@ -1,6 +1,6 @@
 # Entry: `undefined`
 
-> Reference to: `./class.parse`
+> Reference to: [./class.parse.md](./class.parse.md)
 
     
 <br/>
@@ -16,7 +16,7 @@
 
 # Entry: `undefined`
 
-> Reference to: `./comment.parse`
+> Reference to: [./comment.parse.md](./comment.parse.md)
 
     
 <br/>
@@ -32,7 +32,7 @@
 
 # Entry: `undefined`
 
-> Reference to: `./function.parse`
+> Reference to: [./function.parse.md](./function.parse.md)
 
     
 <br/>
@@ -48,7 +48,7 @@
 
 # Entry: `undefined`
 
-> Reference to: `./property.parse`
+> Reference to: [./property.parse.md](./property.parse.md)
 
     
 <br/>
@@ -64,7 +64,7 @@
 
 # Entry: `undefined`
 
-> Reference to: `./interface.parse`
+> Reference to: [./interface.parse.md](./interface.parse.md)
 
     
 <br/>
@@ -80,6 +80,6 @@
 
 # Entry: `undefined`
 
-> Reference to: `./typeAlias.parse`
+> Reference to: [./typeAlias.parse.md](./typeAlias.parse.md)
 
     
