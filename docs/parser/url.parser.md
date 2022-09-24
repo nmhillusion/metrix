@@ -4,16 +4,16 @@
 
 ## Property List
 
-- **protocal**: `string` -- 
+- **protocal**: `string` 
 
 
-- **host**: `string` -- 
+- **host**: `string` 
 
 
-- **path**: `string` -- 
+- **path**: `string` 
 
 
-- **paramMap**: `Map<string, string[]>` -- 
+- **paramMap**: `Map<string, string[]>` 
 
 
 <br/>
@@ -47,13 +47,13 @@
 
 ## Methods
 
-### Function: `parse(url: string)`
+### Function: `parse`
 
     
 
 #### Parameter List:
 
-- **url**: `string` -- 
+- **url**: `string` 
 
 
 #### Return Type: `UrlParserResult | undefined` 
@@ -61,19 +61,17 @@
 <br/>
 <br/>
 
-### Function: `mergeParams(url?: string, params?: {
-        [param: string]: string | number | boolean | ReadonlyArray<string | number | boolean>;
-    })`
+### Function: `mergeParams`
 
     
 
 #### Parameter List:
 
-- **url**: `string` _(optional)_ -- 
+- **url**: `string` _(optional)_ 
 
 - **params**: `{
         [param: string]: string | number | boolean | ReadonlyArray<string | number | boolean>;
-    }` _(optional)_ -- 
+    }` _(optional)_ 
 
 
 #### Return Type: `string | undefined` 

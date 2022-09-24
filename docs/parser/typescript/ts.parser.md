@@ -4,7 +4,7 @@
 
 ## Properties
 
-- **__tsFilePath**: `undefined` -- 
+- **__tsFilePath**: `undefined` 
 
 
 <br/>
@@ -12,13 +12,13 @@
 
 ## Methods
 
-### Function: `parse()`
+### Function: `parse`
 
     
 
 #### Parameter List:
 
-
+`None`
 
 #### Return Type: `TsFileModel` 
 

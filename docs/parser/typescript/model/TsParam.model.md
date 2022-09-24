@@ -4,16 +4,16 @@
 
 ## Property List
 
-- **name**: `string` -- 
+- **name**: `string` 
 
 
-- **comments**: `TsCommentModel[]` -- 
+- **comments**: `TsCommentModel[]` 
 
 
-- **type**: `string` _(optional)_ -- 
+- **type**: `string` _(optional)_ 
 
 
-- **optional**: `boolean` -- 
+- **optional**: `boolean` 
 
 
 <br/>

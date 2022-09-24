@@ -4,27 +4,27 @@
 
 ## Properties
 
-- **name**: `string` -- 
+- **name**: `string` 
 
 <br/>
 <br/>
 
-- **type**: `string` _(optional)_ -- 
+- **type**: `string` _(optional)_ 
 
 <br/>
 <br/>
 
-- **isStatic**: `boolean` -- 
+- **isStatic**: `boolean` 
 
 <br/>
 <br/>
 
-- **comments**: `TsCommentModel[]` -- 
+- **comments**: `TsCommentModel[]` 
 
 <br/>
 <br/>
 
-- **optional**: `boolean` -- 
+- **optional**: `boolean` 
 
 
 <br/>

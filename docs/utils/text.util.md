@@ -1,10 +1,10 @@
-# Function: `stringToNormalLines(text: string)`
+# Function: `stringToNormalLines`
 
     
 
 ### Parameter List:
 
-- **text**: `string` -- 
+- **text**: `string` 
 
 
 ### Return Type: `string[]` 

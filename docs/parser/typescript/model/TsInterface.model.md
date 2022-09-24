@@ -4,22 +4,22 @@
 
 ## Property List
 
-- **filePath**: `string` _(optional)_ -- 
+- **filePath**: `string` _(optional)_ 
 
 
-- **interfaceName**: `string` -- 
+- **interfaceName**: `string` 
 
 
-- **isExport**: `boolean` -- 
+- **isExport**: `boolean` 
 
 
-- **propertyList**: `TsPropertyModel[]` -- 
+- **propertyList**: `TsPropertyModel[]` 
 
 
-- **methodList**: `TsFunctionModel[]` -- 
+- **methodList**: `TsFunctionModel[]` 
 
 
-- **comments**: `TsCommentModel[]` -- 
+- **comments**: `TsCommentModel[]` 
 
 
 <br/>

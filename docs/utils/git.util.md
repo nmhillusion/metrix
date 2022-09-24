@@ -1,10 +1,10 @@
-# Function: `tagVersion(packageJsonPath: string)`
+# Function: `tagVersion`
 
     
 
 ### Parameter List:
 
-- **packageJsonPath**: `string` -- 
+- **packageJsonPath**: `string` 
 
 
 ### Return Type: `void` 

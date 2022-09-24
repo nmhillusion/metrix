@@ -4,7 +4,7 @@
 
 ## Property List
 
-- **content**: `string` -- 
+- **content**: `string` 
 
 
 <br/>

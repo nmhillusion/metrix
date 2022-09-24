@@ -4,16 +4,16 @@
 
 ## Property List
 
-- **filePath**: `string` -- 
+- **filePath**: `string` 
 
 
-- **comments**: `TsCommentModel[]` -- 
+- **comments**: `TsCommentModel[]` 
 
 
-- **exportName**: `string` _(optional)_ -- 
+- **exportName**: `string` _(optional)_ 
 
 
-- **moduleSpecifier**: `string` _(optional)_ -- 
+- **moduleSpecifier**: `string` _(optional)_ 
 
 
 <br/>

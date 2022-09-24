@@ -1,7 +1,4 @@
-# Function: `buildPublishPackageJson({ basePublishDir, packageJsonPath, }: {
-    packageJsonPath: string;
-    basePublishDir: string;
-})`
+# Function: `buildPublishPackageJson`
 
     
 
@@ -10,7 +7,7 @@
 - **{ basePublishDir, packageJsonPath, }**: `{
     packageJsonPath: string;
     basePublishDir: string;
-}` -- 
+}` 
 
 
 ### Return Type: `void` 

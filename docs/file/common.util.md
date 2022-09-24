@@ -11,7 +11,7 @@
 
 ## Methods
 
-### Function: `isFile(path: fs.PathLike)`
+### Function: `isFile`
 
     Determine of this path is pointed to a file
 
@@ -25,13 +25,13 @@
 <br/>
 <br/>
 
-### Function: `isDirectory(path: fs.PathLike)`
+### Function: `isDirectory`
 
     
 
 #### Parameter List:
 
-- **path**: `fs.PathLike` -- 
+- **path**: `fs.PathLike` 
 
 
 #### Return Type: `boolean` 

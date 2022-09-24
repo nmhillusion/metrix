@@ -1,12 +1,12 @@
-# Function: `parseCommentFromNode(tsSourceFile: ts.SourceFile, node: ts.Node)`
+# Function: `parseCommentFromNode`
 
     
 
 ### Parameter List:
 
-- **tsSourceFile**: `ts.SourceFile` -- 
+- **tsSourceFile**: `ts.SourceFile` 
 
-- **node**: `ts.Node` -- 
+- **node**: `ts.Node` 
 
 
 ### Return Type: `TsCommentModel[]` 

@@ -27,13 +27,13 @@
 
 ## Methods
 
-### Function: `setCookie(cookie: CookieModel)`
+### Function: `setCookie`
 
     
 
 #### Parameter List:
 
-- **cookie**: `CookieModel` -- 
+- **cookie**: `CookieModel` 
 
 
 #### Return Type: `string` 

@@ -1,10 +1,10 @@
-# Function: `domUtils()`
+# Function: `domUtils`
 
     
 
 ### Parameter List:
 
-
+`None`
 
 ### Return Type: `{
     querySelectorAll({ selector, text, attributes }: {

@@ -1,14 +1,14 @@
-# Function: `parseExportFromNode(filePath: string, tsSourceFile: ts.SourceFile, expNode: ts.ExportDeclaration)`
+# Function: `parseExportFromNode`
 
     
 
 ### Parameter List:
 
-- **filePath**: `string` -- 
+- **filePath**: `string` 
 
-- **tsSourceFile**: `ts.SourceFile` -- 
+- **tsSourceFile**: `ts.SourceFile` 
 
-- **expNode**: `ts.ExportDeclaration` -- 
+- **expNode**: `ts.ExportDeclaration` 
 
 
 ### Return Type: `TsExportModel` 

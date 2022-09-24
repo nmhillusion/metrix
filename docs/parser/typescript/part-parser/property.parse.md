@@ -1,12 +1,12 @@
-# Function: `parsePropertyFromNode(tsSourceFile: ts.SourceFile, propertyNode: ts.PropertyDeclaration | ts.PropertySignature)`
+# Function: `parsePropertyFromNode`
 
     
 
 ### Parameter List:
 
-- **tsSourceFile**: `ts.SourceFile` -- 
+- **tsSourceFile**: `ts.SourceFile` 
 
-- **propertyNode**: `ts.PropertyDeclaration | ts.PropertySignature` -- 
+- **propertyNode**: `ts.PropertyDeclaration | ts.PropertySignature` 
 
 
 ### Return Type: `TsPropertyModel` 

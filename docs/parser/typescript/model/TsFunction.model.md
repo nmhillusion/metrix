@@ -4,25 +4,25 @@
 
 ## Property List
 
-- **filePath**: `string` _(optional)_ -- 
+- **filePath**: `string` _(optional)_ 
 
 
-- **functionName**: `string` -- 
+- **functionName**: `string` 
 
 
-- **returnType**: `string` -- 
+- **returnType**: `string` 
 
 
-- **isStatic**: `boolean` -- 
+- **isStatic**: `boolean` 
 
 
-- **isExport**: `boolean` -- 
+- **isExport**: `boolean` 
 
 
-- **paramList**: `TsParamModel[]` -- 
+- **paramList**: `TsParamModel[]` 
 
 
-- **comments**: `TsCommentModel[]` -- 
+- **comments**: `TsCommentModel[]` 
 
 
 <br/>

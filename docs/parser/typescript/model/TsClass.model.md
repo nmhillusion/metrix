@@ -4,22 +4,22 @@
 
 ## Property List
 
-- **filePath**: `string` _(optional)_ -- 
+- **filePath**: `string` _(optional)_ 
 
 
-- **className**: `string` -- 
+- **className**: `string` 
 
 
-- **isExport**: `boolean` -- 
+- **isExport**: `boolean` 
 
 
-- **comments**: `TsCommentModel[]` -- 
+- **comments**: `TsCommentModel[]` 
 
 
-- **methodList**: `TsFunctionModel[]` -- 
+- **methodList**: `TsFunctionModel[]` 
 
 
-- **propertyList**: `TsPropertyModel[]` -- 
+- **propertyList**: `TsPropertyModel[]` 
 
 
 <br/>

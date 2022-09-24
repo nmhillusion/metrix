@@ -4,7 +4,7 @@
 
 ## Properties
 
-- **startPath**: `undefined` -- 
+- **startPath**: `undefined` 
 
 
 <br/>
@@ -12,13 +12,13 @@
 
 ## Methods
 
-### Function: `fromPath(path: fs.PathLike)`
+### Function: `fromPath`
 
     
 
 #### Parameter List:
 
-- **path**: `fs.PathLike` -- 
+- **path**: `fs.PathLike` 
 
 
 #### Return Type: `this` 
@@ -26,13 +26,13 @@
 <br/>
 <br/>
 
-### Function: `run(path?: fs.PathLike)`
+### Function: `run`
 
     
 
 #### Parameter List:
 
-- **path**: `fs.PathLike` _(optional)_ -- 
+- **path**: `fs.PathLike` _(optional)_ 
 
 
 #### Return Type: `Promise<string[]>` 
@@ -40,15 +40,15 @@
 <br/>
 <br/>
 
-### Function: `runWithCallback(callback: (filePath: fs.PathLike) => any, path?: fs.PathLike)`
+### Function: `runWithCallback`
 
     
 
 #### Parameter List:
 
-- **callback**: `(filePath: fs.PathLike) => any` -- 
+- **callback**: `(filePath: fs.PathLike) => any` 
 
-- **path**: `fs.PathLike` _(optional)_ -- 
+- **path**: `fs.PathLike` _(optional)_ 
 
 
 #### Return Type: `void` 

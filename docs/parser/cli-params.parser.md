@@ -1,4 +1,4 @@
-# Function: `cliParamsParser(argvs: string[])`
+# Function: `cliParamsParser`
 
     Parser arguments from command line with structure of <command> <arg1> <arg2> <arg3>...
 

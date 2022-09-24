@@ -1,14 +1,14 @@
-# Function: `parseInterfaceFromNode(filePath: string, tsSourceFile: ts.SourceFile, interfNode: ts.InterfaceDeclaration)`
+# Function: `parseInterfaceFromNode`
 
     
 
 ### Parameter List:
 
-- **filePath**: `string` -- 
+- **filePath**: `string` 
 
-- **tsSourceFile**: `ts.SourceFile` -- 
+- **tsSourceFile**: `ts.SourceFile` 
 
-- **interfNode**: `ts.InterfaceDeclaration` -- 
+- **interfNode**: `ts.InterfaceDeclaration` 
 
 
 ### Return Type: `TsInterfaceModel` 

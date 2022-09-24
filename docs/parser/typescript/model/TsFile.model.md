@@ -4,16 +4,16 @@
 
 ## Property List
 
-- **tsFunctionList**: `TsFunctionModel[]` -- 
+- **tsFunctionList**: `TsFunctionModel[]` 
 
 
-- **tsClassList**: `TsClassModel[]` -- 
+- **tsClassList**: `TsClassModel[]` 
 
 
-- **tsInterfaceList**: `TsInterfaceModel[]` -- 
+- **tsInterfaceList**: `TsInterfaceModel[]` 
 
 
-- **tsExportList**: `TsExportModel[]` -- 
+- **tsExportList**: `TsExportModel[]` 
 
 
 <br/>

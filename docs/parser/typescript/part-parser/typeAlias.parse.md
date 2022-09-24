@@ -1,14 +1,14 @@
-# Function: `parseTypeAliasFromNode(filePath: string, tsSourceFile: ts.SourceFile, typeAliasNode: ts.TypeAliasDeclaration | ts.TypeLiteralNode)`
+# Function: `parseTypeAliasFromNode`
 
     
 
 ### Parameter List:
 
-- **filePath**: `string` -- 
+- **filePath**: `string` 
 
-- **tsSourceFile**: `ts.SourceFile` -- 
+- **tsSourceFile**: `ts.SourceFile` 
 
-- **typeAliasNode**: `ts.TypeAliasDeclaration | ts.TypeLiteralNode` -- 
+- **typeAliasNode**: `ts.TypeAliasDeclaration | ts.TypeLiteralNode` 
 
 
 ### Return Type: `TsInterfaceModel` 

@@ -1,12 +1,12 @@
-# Function: `nfn(fn: (..._argvs: any[]) => any, amount?: number)`
+# Function: `nfn`
 
     
 
 ### Parameter List:
 
-- **fn**: `(..._argvs: any[]) => any` -- 
+- **fn**: `(..._argvs: any[]) => any` 
 
-- **amount**: `number` _(optional)_ -- 
+- **amount**: `number` _(optional)_ 
 
 
 ### Return Type: `(...args: any[]) => any` 
@@ -22,13 +22,13 @@
 <br/>
 <br/>
 
-# Function: `suffle(arr: any[])`
+# Function: `suffle`
 
     
 
 ### Parameter List:
 
-- **arr**: `any[]` -- 
+- **arr**: `any[]` 
 
 
 ### Return Type: `any[]` 
@@ -44,13 +44,13 @@
 <br/>
 <br/>
 
-# Function: `randomColor()`
+# Function: `randomColor`
 
     
 
 ### Parameter List:
 
-
+`None`
 
 ### Return Type: `string` 
 
@@ -65,13 +65,13 @@
 <br/>
 <br/>
 
-# Function: `logObject(o: any)`
+# Function: `logObject`
 
     
 
 ### Parameter List:
 
-- **o**: `any` -- 
+- **o**: `any` 
 
 
 ### Return Type: `void` 

@@ -1,14 +1,14 @@
-# Function: `parseFunctionFromNode(filePath: string, tsSourceFile: ts.SourceFile, funcNode: ts.FunctionDeclaration | ts.MethodDeclaration | ts.MethodSignature)`
+# Function: `parseFunctionFromNode`
 
     
 
 ### Parameter List:
 
-- **filePath**: `string` -- 
+- **filePath**: `string` 
 
-- **tsSourceFile**: `ts.SourceFile` -- 
+- **tsSourceFile**: `ts.SourceFile` 
 
-- **funcNode**: `ts.FunctionDeclaration | ts.MethodDeclaration | ts.MethodSignature` -- 
+- **funcNode**: `ts.FunctionDeclaration | ts.MethodDeclaration | ts.MethodSignature` 
 
 
 ### Return Type: `TsFunctionModel` 
