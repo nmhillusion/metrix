@@ -1,6 +1,6 @@
 # Entry: `undefined`
 
-> Reference to: `"./cli-params.parser"`
+> Reference to: `./cli-params.parser`
 
     
 <br/>
@@ -16,7 +16,7 @@
 
 # Entry: `undefined`
 
-> Reference to: `"./url.parser"`
+> Reference to: `./url.parser`
 
     
 <br/>
@@ -32,6 +32,6 @@
 
 # Entry: `typescript`
 
-> Reference to: `"./typescript"`
+> Reference to: [./typescript](./typescript)
 
     

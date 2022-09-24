@@ -1,6 +1,6 @@
 # Entry: `undefined`
 
-> Reference to: `"./common.util"`
+> Reference to: `./common.util`
 
     
 <br/>
@@ -16,6 +16,6 @@
 
 # Entry: `undefined`
 
-> Reference to: `"./traversal.util"`
+> Reference to: `./traversal.util`
 
     

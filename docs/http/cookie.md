@@ -1,6 +1,6 @@
 # Entry: `undefined`
 
-> Reference to: `undefined`
+> Reference to: undefined
 
     
 <br/>

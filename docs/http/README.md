@@ -1,5 +1,5 @@
 # Entry: `undefined`
 
-> Reference to: `"./cookie"`
+> Reference to: `./cookie`
 
     

@@ -1,6 +1,6 @@
 # Entry: `undefined`
 
-> Reference to: `"./ts.parser"`
+> Reference to: `./ts.parser`
 
     
 <br/>
@@ -16,6 +16,6 @@
 
 # Entry: `undefined`
 
-> Reference to: `"./model"`
+> Reference to: [./model](./model)
 
     

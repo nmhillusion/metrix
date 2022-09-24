@@ -1,5 +1,6 @@
-
 # n2mix
 
-> List of utilities to support for common issues, to develop faster
+> List of utilities to support for common issues/matters, to develop faster
 
+Each module will be organize to each folder correspond to its name.
+To discover this project please follow [this link](./docs/README.md)

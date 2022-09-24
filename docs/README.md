@@ -1,6 +1,6 @@
 # Entry: `util`
 
-> Reference to: `"./utils"`
+> Reference to: [./utils](./utils)
 
     utils to complete common actions
 <br/>
@@ -16,7 +16,7 @@
 
 # Entry: `parser`
 
-> Reference to: `"./parser"`
+> Reference to: [./parser](./parser)
 
     parser to parse url; cookie; command-line params
 <br/>
@@ -32,7 +32,7 @@
 
 # Entry: `http`
 
-> Reference to: `"./http"`
+> Reference to: [./http](./http)
 
     wrapper for http method;
 
@@ -50,7 +50,7 @@ helpers for http setting
 
 # Entry: `file`
 
-> Reference to: `"./file"`
+> Reference to: [./file](./file)
 
     checking; reading and other things to do with file system
 <br/>
@@ -66,6 +66,6 @@ helpers for http setting
 
 # Entry: `helper`
 
-> Reference to: `"./helper"`
+> Reference to: [./helper](./helper)
 
     helpers to do common task with many actions; more common than util module

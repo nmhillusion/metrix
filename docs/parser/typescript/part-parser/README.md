@@ -1,6 +1,6 @@
 # Entry: `undefined`
 
-> Reference to: `"./class.parse"`
+> Reference to: `./class.parse`
 
     
 <br/>
@@ -16,7 +16,7 @@
 
 # Entry: `undefined`
 
-> Reference to: `"./comment.parse"`
+> Reference to: `./comment.parse`
 
     
 <br/>
@@ -32,7 +32,7 @@
 
 # Entry: `undefined`
 
-> Reference to: `"./function.parse"`
+> Reference to: `./function.parse`
 
     
 <br/>
@@ -48,7 +48,7 @@
 
 # Entry: `undefined`
 
-> Reference to: `"./property.parse"`
+> Reference to: `./property.parse`
 
     
 <br/>
@@ -64,7 +64,7 @@
 
 # Entry: `undefined`
 
-> Reference to: `"./interface.parse"`
+> Reference to: `./interface.parse`
 
     
 <br/>
@@ -80,6 +80,6 @@
 
 # Entry: `undefined`
 
-> Reference to: `"./typeAlias.parse"`
+> Reference to: `./typeAlias.parse`
 
     

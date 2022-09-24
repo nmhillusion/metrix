@@ -1,6 +1,6 @@
 # Entry: `undefined`
 
-> Reference to: `"./TsClass.model"`
+> Reference to: `./TsClass.model`
 
     
 <br/>
@@ -16,7 +16,7 @@
 
 # Entry: `undefined`
 
-> Reference to: `"./TsComment.model"`
+> Reference to: `./TsComment.model`
 
     
 <br/>
@@ -32,7 +32,7 @@
 
 # Entry: `undefined`
 
-> Reference to: `"./TsFile.model"`
+> Reference to: `./TsFile.model`
 
     
 <br/>
@@ -48,7 +48,7 @@
 
 # Entry: `undefined`
 
-> Reference to: `"./TsFunction.model"`
+> Reference to: `./TsFunction.model`
 
     
 <br/>
@@ -64,7 +64,7 @@
 
 # Entry: `undefined`
 
-> Reference to: `"./TsParam.model"`
+> Reference to: `./TsParam.model`
 
     
 <br/>
@@ -80,7 +80,7 @@
 
 # Entry: `undefined`
 
-> Reference to: `"./TsProperty.model"`
+> Reference to: `./TsProperty.model`
 
     
 <br/>
@@ -96,7 +96,7 @@
 
 # Entry: `undefined`
 
-> Reference to: `"./TsInterface.model"`
+> Reference to: `./TsInterface.model`
 
     
 <br/>
@@ -112,7 +112,7 @@
 
 # Entry: `undefined`
 
-> Reference to: `"./TsExport.model"`
+> Reference to: `./TsExport.model`
 
     
 <br/>
@@ -128,6 +128,6 @@
 
 # Entry: `undefined`
 
-> Reference to: `"./KeyWord.type"`
+> Reference to: `./KeyWord.type`
 
     
