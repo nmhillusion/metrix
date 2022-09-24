@@ -5,7 +5,7 @@ import { DocsGenerator } from "@nmhillusion/n2gendocs-ts";
 
 console.log({ __dirname });
 
-const prefixPath = path.join(__dirname, "../dist/javascript");
+const prefixPath = path.join(__dirname, "../dist");
 
 try {
   fs.rmSync(path.join(__dirname, "./file"), { force: true, recursive: true });

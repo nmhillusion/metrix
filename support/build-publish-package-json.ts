@@ -1,7 +1,7 @@
 import path from "path";
-import { buildPublishPackageJson } from "../src/typescript/helper/package.helper";
+import { buildPublishPackageJson } from "../src/helper/package.helper";
 
 buildPublishPackageJson({
-  basePublishDir: path.join(__dirname, "../dist/javascript"),
+  basePublishDir: path.join(__dirname, "../dist"),
   packageJsonPath: path.join(__dirname, "../package.json"),
 });

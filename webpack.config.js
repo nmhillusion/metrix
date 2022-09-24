@@ -2,7 +2,7 @@ const path = require("path");
 
 module.exports = {
   mode: "production",
-  entry: "./dist/javascript/index.js",
+  entry: "./dist/index.js",
   output: {
     library: "_m",
     filename: "main.js",
@@ -10,7 +10,7 @@ module.exports = {
   },
   resolve: {
     alias: {
-      "@root": path.resolve(__dirname, "dist/javascript"),
+      "@root": path.resolve(__dirname, "dist"),
     },
   },
 };

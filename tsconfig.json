@@ -1,7 +1,7 @@
 {
   "compilerOptions": {
     "module": "CommonJS",
-    "sourceRoot": "./src/typescript",
+    "sourceRoot": "./src",
     "sourceMap": true,
     "target": "ES3",
     "charset": "utf8",
@@ -10,15 +10,15 @@
     "declarationMap": true,
     "skipLibCheck": true,
     "moduleResolution": "Node",
-    "outDir": "./dist/javascript",
+    "outDir": "./dist",
     "pretty": true,
-    "rootDir": "./src/typescript",
+    "rootDir": "./src",
     "baseUrl": ".",
     "esModuleInterop": true,
     "paths": {
-      "@nmhillusion/n2mix/*": ["./src/typescript/*"]
+      "@nmhillusion/n2mix/*": ["./src/*"]
     }
   },
-  "include": ["src/typescript/**/*"],
+  "include": ["src/**/*"],
   "exclude": ["node_modules/**/*"]
 }
