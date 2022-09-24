@@ -11,6 +11,7 @@ import { parseFunctionFromNode } from "./function.parse";
 import { LogFactory } from "@nmhillusion/n2log4web";
 
 export function parseTypeAliasFromNode(
+  filePath: string,
   tsSourceFile: ts.SourceFile,
   typeAliasNode: ts.TypeAliasDeclaration | ts.TypeLiteralNode
 ): TsInterfaceModel {
@@ -30,12 +31,13 @@ export function parseTypeAliasFromNode(
     if (ts.isTypeLiteralNode(member)) {
       const typeLiteralNode: ts.TypeLiteralNode = member;
       propertyList.push(
-        ...parseTypeAliasFromNode(tsSourceFile, typeLiteralNode).propertyList
+        ...parseTypeAliasFromNode(filePath, tsSourceFile, typeLiteralNode)
+          .propertyList
       );
     } else if (ts.isPropertySignature(member)) {
       propertyList.push(parsePropertyFromNode(tsSourceFile, member));
     } else if (ts.isMethodSignature(member)) {
-      methodList.push(parseFunctionFromNode(tsSourceFile, member));
+      methodList.push(parseFunctionFromNode(filePath, tsSourceFile, member));
     } else {
       LogFactory.getNodeLog(__filename).info(
         "other member kind: ",
@@ -45,6 +47,7 @@ export function parseTypeAliasFromNode(
   });
 
   return {
+    filePath,
     interfaceName: ts.isTypeAliasDeclaration(typeAliasNode)
       ? typeAliasNode.name.escapedText.toString()
       : "",

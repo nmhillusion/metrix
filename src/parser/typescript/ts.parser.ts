@@ -13,14 +13,20 @@ import { parseExportFromNode } from "./part-parser/export.parse";
 import { LogFactory } from "@nmhillusion/n2log4web";
 
 export class TsParser {
-  constructor(private tsFilePath: fs.PathLike) {
-    tsFilePath = path.resolve(String(tsFilePath));
+  private __tsFilePath: string = "";
+
+  get tsFilePath() {
+    return this.__tsFilePath;
+  }
+
+  constructor(tsFilePath: fs.PathLike) {
+    this.__tsFilePath = path.resolve(String(tsFilePath));
   }
 
   parse(): TsFileModel {
     const tsSourceFile = ts.createSourceFile(
-      path.basename(String(this.tsFilePath)),
-      fs.readFileSync(this.tsFilePath).toString(),
+      path.basename(String(this.__tsFilePath)),
+      fs.readFileSync(this.__tsFilePath).toString(),
       ts.ScriptTarget.Latest
     );
 
@@ -31,15 +37,25 @@ export class TsParser {
 
     tsSourceFile.forEachChild((child) => {
       if (ts.isClassDeclaration(child)) {
-        tsClassList.push(parseClassFromNode(tsSourceFile, child));
+        tsClassList.push(
+          parseClassFromNode(this.tsFilePath, tsSourceFile, child)
+        );
       } else if (ts.isFunctionDeclaration(child)) {
-        tsFunctionList.push(parseFunctionFromNode(tsSourceFile, child));
+        tsFunctionList.push(
+          parseFunctionFromNode(this.tsFilePath, tsSourceFile, child)
+        );
       } else if (ts.isInterfaceDeclaration(child)) {
-        tsInterfaceList.push(parseInterfaceFromNode(tsSourceFile, child));
+        tsInterfaceList.push(
+          parseInterfaceFromNode(this.tsFilePath, tsSourceFile, child)
+        );
       } else if (ts.isTypeAliasDeclaration(child)) {
-        tsInterfaceList.push(parseTypeAliasFromNode(tsSourceFile, child));
+        tsInterfaceList.push(
+          parseTypeAliasFromNode(this.tsFilePath, tsSourceFile, child)
+        );
       } else if (ts.isExportDeclaration(child)) {
-        tsExportList.push(parseExportFromNode(tsSourceFile, child));
+        tsExportList.push(
+          parseExportFromNode(this.tsFilePath, tsSourceFile, child)
+        );
       } else if (
         ts.SyntaxKind[ts.SyntaxKind.EndOfFileToken] == ts.SyntaxKind[child.kind]
       ) {

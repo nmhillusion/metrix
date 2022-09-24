@@ -11,6 +11,7 @@ import { parseFunctionFromNode } from "./function.parse";
 import { LogFactory } from "@nmhillusion/n2log4web";
 
 export function parseClassFromNode(
+  filePath: string,
   tsSourceFile: ts.SourceFile,
   classNode: ts.ClassDeclaration
 ): TsClassModel {
@@ -26,7 +27,7 @@ export function parseClassFromNode(
 
   classNode.forEachChild((member) => {
     if (ts.isMethodDeclaration(member)) {
-      methodList.push(parseFunctionFromNode(tsSourceFile, member));
+      methodList.push(parseFunctionFromNode(filePath, tsSourceFile, member));
     } else if (ts.isPropertyDeclaration(member)) {
       propertyList.push(parsePropertyFromNode(tsSourceFile, member));
     } else {
@@ -38,6 +39,7 @@ export function parseClassFromNode(
   });
 
   return {
+    filePath,
     className: classNode.name.escapedText.toString(),
     comments: parseCommentFromNode(tsSourceFile, classNode),
     isExport,

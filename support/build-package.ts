@@ -1,7 +1,6 @@
 import * as shx from "shelljs";
 
 execCommand("npm run build-js");
-execCommand("npm run build-scss");
 execCommand("npm run webpack");
 execCommand("npm run build-docs");
 execCommand("npm run build-publish-package-json");

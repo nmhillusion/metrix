@@ -17,7 +17,6 @@
   "scripts": {
     "test": "jest --config=jest.config.js",
     "build-js": "tsc",
-    "build-scss": "sass src/scss:dist/css",
     "webpack": "webpack",
     "build-docs": "ts-node ./docs/generate-docs.ts",
     "build-publish-package-json": "ts-node ./support/build-publish-package-json.ts",

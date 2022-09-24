@@ -11,6 +11,7 @@ import { parseFunctionFromNode } from "./function.parse";
 import { LogFactory } from "@nmhillusion/n2log4web";
 
 export function parseInterfaceFromNode(
+  filePath: string,
   tsSourceFile: ts.SourceFile,
   interfNode: ts.InterfaceDeclaration
 ): TsInterfaceModel {
@@ -35,13 +36,17 @@ export function parseInterfaceFromNode(
     } else if (ts.isPropertySignature(member)) {
       propertyList.push(parsePropertyFromNode(tsSourceFile, member));
     } else if (ts.isMethodSignature(member)) {
-      methodList.push(parseFunctionFromNode(tsSourceFile, member));
+      methodList.push(parseFunctionFromNode(filePath, tsSourceFile, member));
     } else {
-      LogFactory.getNodeLog(__filename).info("other member kind: ", ts.SyntaxKind[member.kind]);
+      LogFactory.getNodeLog(__filename).info(
+        "other member kind: ",
+        ts.SyntaxKind[member.kind]
+      );
     }
   });
 
   return {
+    filePath,
     interfaceName: interfNode.name.escapedText.toString(),
     comments: parseCommentFromNode(tsSourceFile, interfNode),
     propertyList,

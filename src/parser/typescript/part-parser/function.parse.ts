@@ -3,6 +3,7 @@ import { KeywordType, TsFunctionModel, TsParamModel } from "../model";
 import { parseCommentFromNode } from "./comment.parse";
 
 export function parseFunctionFromNode(
+  filePath: string,
   tsSourceFile: ts.SourceFile,
   funcNode: ts.FunctionDeclaration | ts.MethodDeclaration | ts.MethodSignature
 ): TsFunctionModel {
@@ -32,6 +33,7 @@ export function parseFunctionFromNode(
   // });
 
   return {
+    filePath,
     functionName: funcNode.name.getText(tsSourceFile),
     returnType: funcNode.type?.getText(tsSourceFile),
     isStatic,

@@ -4,6 +4,9 @@
 
 ## Property List
 
+- **filePath**: `string` -- 
+
+
 - **comments**: `TsCommentModel[]` -- 
 
 

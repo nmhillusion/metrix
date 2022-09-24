@@ -4,7 +4,7 @@
 
 ## Properties
 
-- **tsFilePath**: `undefined` -- 
+- **__tsFilePath**: `undefined` -- 
 
 
 <br/>

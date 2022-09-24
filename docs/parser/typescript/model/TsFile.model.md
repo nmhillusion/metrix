@@ -13,7 +13,7 @@
 - **tsInterfaceList**: `TsInterfaceModel[]` -- 
 
 
-- **tsExportList**: `any[]` -- 
+- **tsExportList**: `TsExportModel[]` -- 
 
 
 <br/>

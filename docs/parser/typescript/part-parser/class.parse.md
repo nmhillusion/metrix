@@ -1,8 +1,10 @@
-# Function: `parseClassFromNode(tsSourceFile: ts.SourceFile, classNode: ts.ClassDeclaration)`
+# Function: `parseClassFromNode(filePath: string, tsSourceFile: ts.SourceFile, classNode: ts.ClassDeclaration)`
 
     
 
 ### Parameter List:
+
+- **filePath**: `string` -- 
 
 - **tsSourceFile**: `ts.SourceFile` -- 
 

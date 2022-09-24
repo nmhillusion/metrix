@@ -3,6 +3,7 @@ import { TsExportModel } from "../model/TsExport.model";
 import { parseCommentFromNode } from "./comment.parse";
 
 export function parseExportFromNode(
+  filePath: string,
   tsSourceFile: ts.SourceFile,
   expNode: ts.ExportDeclaration
 ): TsExportModel {
@@ -27,6 +28,7 @@ export function parseExportFromNode(
   }
 
   return {
+    filePath,
     exportName,
     comments: parseCommentFromNode(tsSourceFile, expNode),
     moduleSpecifier: expNode.moduleSpecifier?.getText(tsSourceFile),
