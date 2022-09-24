@@ -1,4 +1,4 @@
-# Entry: `undefined`
+# Entry: all exports from - `ts.parser`
 
 > Reference to: [./ts.parser.md](./ts.parser.md)
 
@@ -14,7 +14,7 @@
 <br/>
 <br/>
 
-# Entry: `undefined`
+# Entry: all exports from - `model`
 
 > Reference to: [./model](./model)
 
