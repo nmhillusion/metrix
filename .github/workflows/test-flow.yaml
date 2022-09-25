@@ -1,4 +1,4 @@
-name: Node.js CI - Testing Flow
+name: Testing_Flow
 
 on:
   push:

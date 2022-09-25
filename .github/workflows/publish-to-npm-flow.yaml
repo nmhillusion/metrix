@@ -1,5 +1,10 @@
-name: Publish to NPM
+name: Publish_to_NPM
 on:
+  workflow_run:
+    workflows: ["Testing_Flow"]
+    branches: [main]
+    types:
+      - completed
   release:
     types: [created]
 jobs:
