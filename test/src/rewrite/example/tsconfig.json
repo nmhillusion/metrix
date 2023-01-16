@@ -1,0 +1,15 @@
+{
+  "compilerOptions": {
+    "module": "CommonJS",
+    "baseUrl": ".",
+    "outDir": "dist",
+    "rootDir": "app",
+    "sourceMap": true,
+    "declaration": true,
+    "paths": {
+      "_n2/*": ["./app/*"]
+    }
+  },
+  "include": ["app/**/*"],
+  "exclude": ["node_modules/**/*"]
+}
