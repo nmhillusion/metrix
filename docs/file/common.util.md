@@ -36,3 +36,17 @@
 
 #### Return Type: `boolean` 
 
+<br/>
+<br/>
+
+### Function: `isRelativePath`
+
+    
+
+#### Parameter List:
+
+- **path**: `fs.PathLike` 
+
+
+#### Return Type: `boolean` 
+
