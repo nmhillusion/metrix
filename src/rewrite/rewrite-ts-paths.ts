@@ -1,5 +1,5 @@
 import * as fs from "fs";
-import path, { dirname } from "path";
+import path from "path";
 import { TraversalFile, CommonUtil } from "../file";
 
 export function rewritePathsOfTsConfig(
@@ -73,7 +73,10 @@ function _getExecutingPath(filePath: fs.PathLike): fs.PathLike {
     if (sourcesPath && 0 < sourcesPath.length) {
       const sourcePath = sourcesPath[0];
 
-      const absolutePathToSource = path.resolve(dirname(filePath), sourcePath);
+      const absolutePathToSource = path.resolve(
+        path.dirname(filePath),
+        sourcePath
+      );
 
       if (fs.existsSync(absolutePathToSource)) {
         resultExecPath = absolutePathToSource;
@@ -163,7 +166,11 @@ function _doReplaceImportStatementWithPath(
           const pathsOfAlias = pathsConfig[matchingAliasPathKey];
           const resolvedPaths: string[] = pathsOfAlias.map((_p) => {
             if (CommonUtil.isRelativePath(baseUrl)) {
-              _p = path.resolve(dirname(String(tsconfigPath)), baseUrl, _p);
+              _p = path.resolve(
+                path.dirname(String(tsconfigPath)),
+                baseUrl,
+                _p
+              );
             } else {
               _p = path.resolve(baseUrl, _p);
             }
