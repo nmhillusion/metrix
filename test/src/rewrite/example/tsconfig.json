@@ -3,7 +3,7 @@
     "module": "CommonJS",
     "baseUrl": ".",
     "outDir": "dist",
-    "rootDir": "app",
+    "rootDir": ".",
     "sourceMap": true,
     "declaration": true,
     "paths": {

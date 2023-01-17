@@ -22,4 +22,22 @@ export class CommonUtil {
     }
     return fs.existsSync(path) && fs.lstatSync(path).isDirectory();
   }
+
+  public static isRelativePath(path: fs.PathLike): boolean {
+    if (!path) {
+      return false;
+    }
+
+    const _path = String(path).trim();
+
+    if (["./", "../"].some((_p) => _path.startsWith(_p))) {
+      return true;
+    }
+
+    if ("." == path || ".." == path) {
+      return true;
+    }
+
+    return false;
+  }
 }
