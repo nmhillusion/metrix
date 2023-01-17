@@ -22,6 +22,10 @@ try {
     recursive: true,
   });
   fs.rmSync(path.join(__dirname, "./utils"), { force: true, recursive: true });
+  fs.rmSync(path.join(__dirname, "./rewrite"), {
+    force: true,
+    recursive: true,
+  });
   fs.rmSync(path.join(__dirname, "./README.md"));
 } catch (error) {
   console.error("Error when rm old files: ", error);

@@ -69,3 +69,19 @@ helpers for http setting
 > Reference to: [./helper](./helper)
 
     helpers to do common task with many actions; more common than util module
+<br/>
+<br/>
+
+
+
+---
+
+
+<br/>
+<br/>
+
+# Entry: `rewrite`
+
+> Reference to: [./rewrite](./rewrite)
+
+    functions to rewrite common matters in dev, like rewrite to relative path from paths config of tsconfig
