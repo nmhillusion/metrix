@@ -28,16 +28,25 @@ export function rewritePathsOfTsConfig(
     // console.log("run on file: ", filePath);
 
     if (filterFileToRewrite(filePath)) {
-      console.log("valid file path: ", filePath, { baseUrl, pathsConfig });
-
-      const executingFilePath = _getExecutingPath(filePath);
-
-      _doReplaceImportStatementWithPath(fs.readFileSync(filePath).toString(), {
-        executingFilePath,
-        tsconfigPath,
+      console.log("...executing file path: ", filePath, {
         baseUrl,
         pathsConfig,
       });
+
+      const executingFilePath = _getExecutingPath(filePath);
+
+      const rewriteImportContent = _doReplaceImportStatementWithPath(
+        fs.readFileSync(filePath).toString(),
+        {
+          executingFilePath,
+          tsconfigPath,
+          baseUrl,
+          pathsConfig,
+        }
+      );
+
+      fs.writeFileSync(filePath, rewriteImportContent);
+      console.log("finished executing for file path: ", filePath);
     }
   });
 }
@@ -208,7 +217,7 @@ function _doReplaceImportStatementWithPath(
     );
   }
 
-  console.log({ fileContent });
+  // console.log({ fileContent });
 
   return fileContent;
 }
