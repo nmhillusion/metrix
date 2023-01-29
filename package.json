@@ -1,7 +1,7 @@
 {
   "type": "commonjs",
   "name": "@nmhillusion/n2mix",
-  "version": "v2023.0108.1",
+  "version": "v2023.0108.2",
   "description": "common utils and components for web",
   "main": "dist/index.js",
   "typings": "dist/index.d.js",
