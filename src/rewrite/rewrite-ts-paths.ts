@@ -197,18 +197,21 @@ function _doReplaceImportStatementWithPath(
 
           if (correctResolvePath) {
             let correspondPathToAlias = path.relative(
-              executingDirPath,
-              correctResolvePath
+              path.resolve(executingDirPath),
+              path.resolve(correctResolvePath)
             );
 
-            console.log("compare between: ", {
-              executingDirPath,
-              correctResolvePath,
-            });
+            correspondPathToAlias = correspondPathToAlias.replace(/\\/g, "/");
 
             if (!String(correspondPathToAlias).endsWith("/")) {
               correspondPathToAlias += "/";
             }
+
+            console.log("compare between: ", {
+              executingDirPath,
+              correctResolvePath,
+              correspondPathToAlias,
+            });
 
             resultStatement = _match.replace(
               importPath,
