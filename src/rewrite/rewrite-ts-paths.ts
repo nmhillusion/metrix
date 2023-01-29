@@ -113,9 +113,11 @@ function _combinePathsConfig(pathsConfig: { [key: string]: string[] }): {
     if (!combinedConfig[_config.key]) {
       combinedConfig[_config.key] = _config.value;
     } else {
-      combinedConfig[_config.key] = combinedConfig[_config.key].concat(
-        _config.value
-      );
+      for (const _path of _config.value) {
+        if (!combinedConfig[_config.key].includes(_path)) {
+          combinedConfig[_config.key].push(_path);
+        }
+      }
     }
   }
 
