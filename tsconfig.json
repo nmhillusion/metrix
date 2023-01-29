@@ -3,7 +3,7 @@
     "module": "CommonJS",
     "sourceRoot": "./src",
     "sourceMap": true,
-    "target": "ES5",
+    "target": "ES2022",
     "charset": "utf8",
     "alwaysStrict": true,
     "declaration": true,

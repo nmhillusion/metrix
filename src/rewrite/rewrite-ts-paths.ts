@@ -123,15 +123,18 @@ function _combinePathsConfig(pathsConfig: { [key: string]: string[] }): {
 }
 
 function _getPostfixOfPathToImport(_path: string) {
-  if (fs.existsSync(_path)) {
-    return "";
-  }
-  if (fs.existsSync(_path + ".ts")) {
-    return ".ts";
-  }
+  const extMap = new Map<string, string>();
+  extMap
+    .set("", "")
+    .set(".ts", ".ts")
+    .set(".d.ts", ".d.ts")
+    .set(".js", ".js")
+    .set(".d.js", ".d.js");
 
-  if (fs.existsSync(_path + ".js")) {
-    return ".js";
+  for (const _key of extMap.keys()) {
+    if (fs.existsSync(_path + _key)) {
+      return extMap.get(_key);
+    }
   }
 }
 
@@ -189,10 +192,14 @@ function _doReplaceImportStatementWithPath(
               rp,
               importPath.replace(matchingAliasPathKey, "")
             );
+            const postfixPath = _getPostfixOfPathToImport(resolvedPath);
 
-            // console.log({ resolvedPath });
+            console.log("[> resolve real path of file: ", {
+              resolvedPath,
+              postfixPath,
+            });
 
-            return undefined !== _getPostfixOfPathToImport(resolvedPath);
+            return undefined !== postfixPath;
           });
 
           if (correctResolvePath) {
@@ -219,6 +226,8 @@ function _doReplaceImportStatementWithPath(
             );
 
             console.log({ resultStatement });
+          } else {
+            console.error("Cannot find correct path of ", matchingAliasPathKey);
           }
         }
 
